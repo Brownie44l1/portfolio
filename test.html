@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robinson Honour | Creative Software Engineer</title>
-    <meta name="description" content="Robinson Honour - Software Engineer creating innovative solutions and captivating designs">
-    
+    <title>Abdulmalik Apata | Creative Software Engineer</title>
+    <meta name="description" content="Abdulmalik Apata - Software Engineer creating innovative solutions and captivating designs">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,7 +14,9 @@
             extend: {
               fontFamily: {
                 satoshi: ['Satoshi', 'system-ui', 'sans-serif'],
+                jakarta: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
                 inter: ['Inter', 'system-ui', 'sans-serif'],
+                mono: ['GeistMono', 'ui-monospace', 'monospace'],
               },
             },
           },
@@ -24,16 +26,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"/>
     
     <link rel="stylesheet" href="index.css">
 </head>
-<body class="bg-white dark:bg-black transition-colors duration-300">
-    <!-- Fixed Header with Backdrop Blur -->
+<body class="bg-white dark:bg-black transition-colors duration-300 font-satoshi">
+    <!-- Fixed Header with Glass Distortion Filter -->
+    <!-- SVG Filter Definition -->
+    <svg style="display:none">
+        <filter id="glass-distortion" x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="2" seed="10" result="turbulence"/>
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
     <header class="fixed top-[10px] md:top-[25px] w-full z-50 flex justify-center p-4">
-        <div class="bg-white/80 dark:bg-black/80 backdrop-blur-xl rounded-[20px] border border-zinc-200 dark:border-zinc-800 shadow-lg">
-            <nav id="main-nav" class="flex items-center gap-1 p-[6px] relative z-10">
-                <!-- Navigation will be injected by JavaScript -->
+        <div class="liquidGlass-wrapper bg-[#ffffff80] rounded-[20px] border border-zinc-200">
+            <div class="liquidGlass-effect"></div>
+            <div class="liquidGlass-tint"></div>
+            <div class="liquidGlass-shine"></div>
+            <nav id="main-nav" class="liquidGlass-text flex items-center gap-1 p-[6px] relative z-10">
+                <!-- Your navigation content here -->
             </nav>
         </div>
     </header>
@@ -46,72 +60,66 @@
 
     <main class="flex flex-col relative items-center mx-auto">
         <!-- Hero Section -->
-        <section class="w-full max-w-[53rem] p-4 md:p-6 flex flex-col pt-[120px] md:pt-[160px] pb-[2rem] md:pb-[3rem] px-[1.5rem] md:px-[6rem] items-start gap-[20px]">
+        <div class="w-full max-w-[53rem] p-6 flex flex-col pt-[150px] md:pt-[188px] pb-[2rem] md:pb-[3rem] px-[1.5rem] md:px-[8rem] items-start gap-[25px]">
             <div style="opacity: 1; transform: none;">
-                <img alt="Profile picture" width="80" height="80" decoding="async" 
-                     class="rounded-full aspect-square dark:border-white" 
+                <img alt="Profile picture" width="100" height="100" decoding="async" 
+                     class="rounded-full aspect-square" 
                      src="assets/profile.png">
             </div>
 
-            <div class="text-start font-satoshi" style="opacity: 1; transform: none;">
-                <h1 class="text-[24px] md:text-[36px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white text-start mb-2">
-                    <span class="inline-block mr-[0.2em]">Hey,</span>
-                    <span class="inline-block mr-[0.2em]">I'm</span>
-                    <span class="inline-block mr-[0.2em]">Abdulmalik</span>
-                    <span class="inline-block">Apata.</span>
+            <div class="text-start" style="opacity: 1; transform: none;">
+                <h1 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black text-start no-underline normal-case mb-2 md:mb-2">
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Hey,</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">I'm</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Abdulmalik</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Apata.</span>
                 </h1>
-
-                <h2 class="text-[24px] md:text-[36px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white text-start">
-                    <span class="inline-block mr-[0.2em]">Software</span>
-                    <span class="inline-block">Engineer</span>
+                
+                <h2 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black text-start no-underline normal-case">
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">A</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Software</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Engineer</span>
                 </h2>
-
-                <p class="text-[14px] md:text-[16px] text-zinc-600 dark:text-zinc-400 text-start mt-[20px]">
-                    Creating innovative solutions and captivating designs.<br>
-                    University student by day, visionary creator by night.
-                </p>
+                <p class="text-[16px] text-[#5a5a5a] font-satoshi text-start mt-[25px] no-underline normal-case" style="opacity: 1; transform: none;">Creating innovative solutions and captivating designs.<br>University student by day, visionary creator by night.</p>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto" style="opacity: 1; transform: none;">
-                <button class="bg-black dark:bg-white text-white dark:text-black py-[12px] px-[20px] rounded-[14px] text-[14px] md:text-[16px] hover:opacity-90 duration-[300ms] transition-all">
-                    Hire Me!
-                </button>
+            <div class="flex gap-4" style="opacity: 1; transform: none;">
+                <button class="bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 duration-[300ms] transition-all hover:px-[28px] ml-1 font-satoshi font-medium">Hire Me!</button>
 
-                <div class="flex items-center justify-center rounded-[100px] text-[14px] md:text-[16px] gap-2 px-[20px] py-[12px] bg-[#e1f9dc] dark:bg-[#1a3a1a] text-[#178d00] dark:text-[#4ade80]">
-                  <span class="relative flex h-2 w-2">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#178d00] dark:bg-[#4ade80] opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2 w-2 bg-[#178d00] dark:bg-[#4ade80]"></span>
-                  </span>
-                  <span class="hidden sm:flex">Available for new project</span>
-                  <span class="sm:hidden">Available</span>
-              </div>
+                <div class="flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] text-[#178d00]">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#178d00] dark:bg-[#4ade80] opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#178d00] dark:bg-[#4ade80]"></span>
+                    </span>
+                    <span class="hidden md:flex">Available for new project</span>
+                    <span class="md:hidden">Available</span>
+                </div>
             </div>
-        </section>
+        </div>
 
         <!-- Projects Marquee -->
-        <div class="w-full overflow-hidden py-8">
+        <div class="w-full overflow-hidden py-8 opacity-1">
             <div id="projects-marquee" class="flex gap-6 marquee-container">
                 <!-- Projects will be injected by JavaScript -->
             </div>
         </div>
 
         <!-- About Section -->
-        <section class="w-full max-w-[53rem] p-4 md:p-6 flex flex-col py-[60px] md:py-[100px] px-[1.5rem] md:px-[6rem] items-start gap-[20px]">
-            <h2 class="text-[22px] md:text-[28px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white">About</h2>
-            <h2 class="text-[22px] md:text-[28px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white">About</h2>
+        <div class="w-full max-w-[53rem] p-4 md:p-6 flex flex-col py-[100px] md:py-[158px] px-[1.5rem] md:px-[6rem] items-start gap-[20px]">
+            <h2 class="text-[22px] md:text-[28px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white font-jakarta">About</h2>
 
             <div class="flex flex-col gap-5">
-                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400">
+                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 font-satoshi">
                     I craft scalable products with exceptional user experiences, 
                     focusing on innovation and problem-solving.
                 </p>
 
-                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400">
+                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 font-satoshi">
                     I'm Robinson Honour, a 19-year-old Nigerian software developer with 7.5+ years 
                     of experience in web development, robotics, and cloud computing.
                 </p>
 
-                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400">
+                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 font-satoshi">
                     A self-taught programmer and active tech content creator, I'm the CEO and founder 
                     of Pxxl App, a cloud deployment platform.
                 </p>
@@ -124,7 +132,7 @@
                                  class="object-cover rounded-lg w-full h-full" 
                                  src="assets/image.png">
                         </div>
-                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black dark:text-white w-full text-center">@ikwerre-dev</span>
+                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black dark:text-white w-full text-center font-satoshi">@ikwerre-dev</span>
                     </div>
 
                     <div class="absolute top-10 right-[20%] bg-white dark:bg-zinc-900 px-2 pt-2 rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:rotate-12 group-hover:translate-x-4 group-hover:scale-105">
@@ -133,39 +141,146 @@
                                  class="object-cover w-full h-full" 
                                  src="assets/image.png">
                         </div>
-                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black dark:text-white w-full text-center">@codewithhonour</span>
+                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black dark:text-white w-full text-center font-satoshi">@codewithhonour</span>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Tech Stack Marquee -->
-            <div class="w-full overflow-hidden relative mt-8">
-                <div id="tech-marquee" class="flex items-center"></div>
+        <!-- Projects Section -->
+        <div class="w-full max-w-[53rem] flex flex-col pt-[58px] px-[1.5rem] items-center gap-[25px] md:gap-[25px]">
+            <!-- Tech Stack Marquee Container -->
+            <div class="w-[10rem] overflow-hidden relative marquee-fade">
+                <div id="tech-marquee" class="flex items-center">
+                    <!--Tech Stack Marquee -->
+                </div>
             </div>
-
-            <h2 class="text-[22px] md:text-[28px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white mt-8 mb-4">
-                Here's What I've Been Up To
-            </h2>
-
-            <!-- Project Grid -->
-            <div id="project-grid" class="flex flex-col md:grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+            
+            <div class="flex items-center gap-2 mb-8">
+                <h2 class="text-2xl md:text-3xl lg:text-[32px] text-center font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white font-jakarta">
+                    Here's What I've Been Up To.
+                </h2>
+            </div>
+            
+            <div id="project-grid" class="flex flex-col md:grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                 <!-- Projects will be injected by JavaScript -->
             </div>
-        </section>
+        </div>
+
+        <!--Work Experience Section -->
+
+        <div class="w-full max-w-[53rem] flex flex-col pb-[58px] px-[1.5rem] md:px-[8rem] items-center gap-[25px] md:gap-[25px]">
+            <div class="w-full max-w-[53rem] pt-[100px] md:pt-[154px] flex flex-col items-start">
+                
+                <div class="flex w-full h-[1px] bg-[#E5E5E5] mb-[50px] md:mb-[100px]"></div>
+                <h2 class="text-[22px] font-bold tracking-[-.03em] leading-[110%] text-black mb-[40px]">
+                    Work Experience
+                </h2>
+                
+                <!-- Experience List -->
+                <div class="flex flex-col gap-[30px] w-full">
+                    
+                    <!-- Experience Item 1 -->
+                    <div class="flex flex-col md:flex-row gap-[15px] md:gap-0 md:items-center md:justify-between">
+                        <div class="text-[#8F8F8F] font-medium text-[13px]">
+                            Sept 2024-Present
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[16px] text-black md:text-[#5a5a5a] font-medium">
+                                Founder &amp; CEO at
+                            </div>
+                            <div class="flex items-center gap-1 bg-[#EEF4FF] text-[#3B82F6] px-3 py-1 rounded-md">
+                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] flex items-center justify-center">
+                                    <svg width="5" height="5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 0L9.33013 2.5V7.5L5 10L0.669873 7.5V2.5L5 0Z" fill="white"></path>
+                                    </svg>
+                                </div>
+                                <span>Pxxl App</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 2 -->
+                    <div class="flex flex-col md:flex-row gap-[15px] md:gap-0 md:items-center md:justify-between">
+                        <div class="text-[#8F8F8F] font-medium text-[13px]">
+                            2025-Present
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[16px] text-black md:text-[#5a5a5a] font-medium">
+                                Frontend Developer at
+                            </div>
+                            <div class="flex items-center gap-1 bg-[#EEF4FF] text-[#3B82F6] px-3 py-1 rounded-md">
+                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] flex items-center justify-center">
+                                    <svg width="5" height="5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 0L9.33013 2.5V7.5L5 10L0.669873 7.5V2.5L5 0Z" fill="white"></path>
+                                    </svg>
+                                </div>
+                                <span>Steadfast Int.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 3 -->
+                    <div class="flex flex-col md:flex-row gap-[15px] md:gap-0 md:items-center md:justify-between">
+                        <div class="text-[#8F8F8F] font-medium text-[13px]">
+                            2024-Present
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[16px] text-black md:text-[#5a5a5a] font-medium">
+                                Fullstack Developer at
+                            </div>
+                            <div class="flex items-center gap-1 bg-[#EEF4FF] text-[#3B82F6] px-3 py-1 rounded-md">
+                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] flex items-center justify-center">
+                                    <svg width="5" height="5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 0L9.33013 2.5V7.5L5 10L0.669873 7.5V2.5L5 0Z" fill="white"></path>
+                                    </svg>
+                                </div>
+                                <span>TheEccomerceBoss</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 4 -->
+                    <div class="flex flex-col md:flex-row gap-[15px] md:gap-0 md:items-center md:justify-between">
+                        <div class="text-[#8F8F8F] font-medium text-[13px]">
+                            2019-2022
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[16px] text-black md:text-[#5a5a5a] font-medium">
+                                Backend Developer at
+                            </div>
+                            <div class="flex items-center gap-1 bg-[#EEF4FF] text-[#3B82F6] px-3 py-1 rounded-md">
+                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] flex items-center justify-center">
+                                    <svg width="5" height="5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 0L9.33013 2.5V7.5L5 10L0.669873 7.5V2.5L5 0Z" fill="white"></path>
+                                    </svg>
+                                </div>
+                                <span>OrganStation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Bottom Divider -->
+                <div class="flex w-full h-[1px] bg-[#E5E5E5] my-[50px] md:my-[100px]"></div>
+                
+            </div>
+        </div>
 
         <!-- How Can I Help Section -->
         <section class="w-full max-w-[53rem] flex flex-col items-start">
             <div class="relative bg-black dark:bg-zinc-950 px-[1rem] md:px-[5rem] py-[4rem] md:py-[5rem] w-full overflow-hidden">
                 <!-- Background Pattern -->
                 <img alt="Doodle" loading="lazy" decoding="async" 
-                     class="absolute object-cover top-0 left-0 opacity-10 dark:opacity-5 pointer-events-none w-full h-full" 
-                     src="assets/image.png">
+                     class="absolute object-cover top-0 left-0 pointer-events-none w-full h-full" 
+                     src="assets/doodles.jpg">
                 
                 <div class="relative z-10">
-                    <h2 class="text-[26px] md:text-[32px] font-bold tracking-[-.03em] leading-[110%] text-white text-center w-full mb-[12px]">
+                    <h2 class="text-[26px] md:text-[32px] font-bold tracking-[-.03em] leading-[110%] text-white text-center w-full mb-[12px] font-jakarta">
                         How Can I Help?
                     </h2>
-                    <p class="text-[15px] md:text-[18px] text-zinc-400 text-center w-full mb-[32px] md:mb-[40px]">
+                    <p class="text-[15px] md:text-[18px] text-zinc-400 text-center w-full mb-[32px] md:mb-[40px] font-satoshi">
                         Let's turn your vision into something amazing.
                     </p>
                     
@@ -183,12 +298,12 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="w-full max-w-[53rem] p-4 md:p-6 flex flex-col py-[40px] md:py-[58px] px-[1.5rem] md:px-[6rem] items-center gap-[25px]">
+        <div class="w-full max-w-[53rem] p-4 md:p-6 flex flex-col py-[40px] md:py-[58px] px-[1.5rem] md:px-[6rem] items-center gap-[25px]">
             <div id="contact-form" class="w-full flex flex-col items-start">
-                <h2 class="text-[26px] md:text-[32px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white mb-[12px] md:mb-[16px]">
+                <h2 class="text-[26px] md:text-[32px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white mb-[12px] md:mb-[16px] font-jakarta">
                     Get in touch
                 </h2>
-                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 mb-[24px] md:mb-[32px] max-w-[600px]">
+                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 mb-[24px] md:mb-[32px] max-w-[600px] font-satoshi">
                     I'm always interested in exploring new opportunities, collaborating, or exchanging ideas. 
                     Feel free to book a call or email me to discuss a potential project.
                 </p>
@@ -199,14 +314,14 @@
                             type="text" 
                             placeholder="Full Name" 
                             required 
-                            class="flex-1 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-[14px] px-[20px] md:px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] text-black dark:text-white outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all placeholder:text-zinc-500 dark:placeholder:text-zinc-500" 
+                            class="flex-1 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-[14px] px-[20px] md:px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] text-black dark:text-white outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all placeholder:text-zinc-500 dark:placeholder:text-zinc-500 font-satoshi" 
                             name="name"
                         >
                         <input 
                             type="email" 
                             placeholder="Email Address" 
                             required 
-                            class="flex-1 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-[14px] px-[20px] md:px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] text-black dark:text-white outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all placeholder:text-zinc-500 dark:placeholder:text-zinc-500" 
+                            class="flex-1 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-[14px] px-[20px] md:px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] text-black dark:text-white outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all placeholder:text-zinc-500 dark:placeholder:text-zinc-500 font-satoshi" 
                             name="email"
                         >
                     </div>
@@ -215,19 +330,19 @@
                         name="message" 
                         placeholder="Write your Message" 
                         required 
-                        class="w-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-[14px] px-[20px] md:px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] text-black dark:text-white h-[120px] md:h-[150px] outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all resize-none placeholder:text-zinc-500 dark:placeholder:text-zinc-500"
+                        class="w-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-[14px] px-[20px] md:px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] text-black dark:text-white h-[120px] md:h-[150px] outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all resize-none placeholder:text-zinc-500 dark:placeholder:text-zinc-500 font-satoshi"
                     ></textarea>
                     
                     <button 
                         type="submit" 
-                        class="bg-black dark:bg-white relative text-white dark:text-black py-[12px] md:py-[14px] px-[20px] md:px-[24px] rounded-[14px] text-[14px] md:text-[16px] font-medium hover:opacity-90 duration-[300ms] transition-all w-full disabled:opacity-70 overflow-hidden"
+                        class="bg-black dark:bg-white relative text-white dark:text-black py-[12px] md:py-[14px] px-[20px] md:px-[24px] rounded-[14px] text-[14px] md:text-[16px] font-medium hover:opacity-90 duration-[300ms] transition-all w-full disabled:opacity-70 overflow-hidden font-satoshi"
                     >
                         <img 
                             alt="Doodle" 
                             loading="lazy" 
                             decoding="async" 
-                            class="absolute object-cover top-0 left-0 opacity-10 dark:opacity-5 w-full h-full pointer-events-none" 
-                            src="assets/image.png"
+                            class="absolute object-cover top-0 left-0 w-full h-full pointer-events-none" 
+                            src="assets/doodles.jpg"
                         >
                         <span class="relative z-10">Send Message</span>
                     </button>
@@ -236,19 +351,17 @@
 
             <!-- Footer -->
             <div class="w-full py-[30px] md:py-[40px] flex flex-col items-center gap-[16px] border-t border-zinc-200 dark:border-zinc-800">
-                <p class="text-[13px] md:text-[14px] text-center text-zinc-600 dark:text-zinc-400">
-                    Copyright © 2025 Robinson Honour.
+                <p class="text-[13px] md:text-[14px] text-center text-zinc-600 dark:text-zinc-400 font-satoshi">
+                    Copyright © 2025 Abdulmalik Apata.
                 </p>
                 
                 <div id="social-links" class="flex gap-6 py-1">
                     <!-- Social links will be injected by JavaScript -->
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <script src="index.js"></script>
 </body>
 </html>
-
-<div class="w-full max-w-[53rem] flex flex-col pt-[58px] px-[1.5rem]  items-center gap-[25px] md:gap-[25px]"><div class="w-[10rem] overflow-hidden relative"><div class="rfm-marquee-container " style="--pause-on-hover: running; --pause-on-click: running; --width: 100%; --transform: none;"><div class="rfm-marquee" style="--play: running; --direction: normal; --duration: 469.9609375s; --delay: 0s; --iteration-count: infinite; --min-width: 100%;"><div class="rfm-initial-child-container"><div class="rfm-child" style="--transform: none;"><div class="flex gap-2 text-[#acacac] pr-3 items-center"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="w-[1.8rem] h-[1.8rem]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="w-[1.8rem] h-[1.8rem]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M277.74 312.9c9.8-6.7 23.4-12.5 23.4-12.5s-38.7 7-77.2 10.2c-47.1 3.9-97.7 4.7-123.1 1.3-60.1-8 33-30.1 33-30.1s-36.1-2.4-80.6 19c-52.5 25.4 130 37 224.5 12.1zm-85.4-32.1c-19-42.7-83.1-80.2 0-145.8C296 53.2 242.84 0 242.84 0c21.5 84.5-75.6 110.1-110.7 162.6-23.9 35.9 11.7 74.4 60.2 118.2zm114.6-176.2c.1 0-175.2 43.8-91.5 140.2 24.7 28.4-6.5 54-6.5 54s62.7-32.4 33.9-72.9c-26.9-37.8-47.5-56.6 64.1-121.3zm-6.1 270.5a12.19 12.19 0 0 1-2 2.6c128.3-33.7 81.1-118.9 19.8-97.3a17.33 17.33 0 0 0-8.2 6.3 70.45 70.45 0 0 1 11-3c31-6.5 75.5 41.5-20.6 91.4zM348 437.4s14.5 11.9-15.9 21.2c-57.9 17.5-240.8 22.8-291.6.7-18.3-7.9 16-19 26.8-21.3 11.2-2.4 17.7-2 17.7-2-20.3-14.3-131.3 28.1-56.4 40.2C232.84 509.4 401 461.3 348 437.4zM124.44 396c-78.7 22 47.9 67.4 148.1 24.5a185.89 185.89 0 0 1-28.2-13.8c-44.7 8.5-65.4 9.1-106 4.5-33.5-3.8-13.9-15.2-13.9-15.2zm179.8 97.2c-78.7 14.8-175.8 13.1-233.3 3.6 0-.1 11.8 9.7 72.4 13.6 92.2 5.9 233.8-3.3 237.1-46.9 0 0-6.4 16.5-76.2 29.7zM260.64 353c-59.2 11.4-93.5 11.1-136.8 6.6-33.5-3.5-11.6-19.7-11.6-19.7-86.8 28.8 48.2 61.4 169.5 25.9a60.37 60.37 0 0 1-21.1-12.8z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="w-[1.8rem] h-[1.8rem]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="w-[1.8rem] h-[1.8rem]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="w-[1.8rem] h-[1.8rem]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M480 32l-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z"></path></svg></div></div></div></div><div class="absolute top-0 left-0 w-[4rem] z-10 h-full bg-gradient-to-r from-white to-transparent pointer-events-none"></div><div class="absolute top-0 right-0 w-[4rem] z-10 h-full bg-gradient-to-l from-white to-transparent pointer-events-none"></div></div><div class="flex items-center gap-2 mb-8"><h2 class="text-[32px] text-center  font-bold tracking-[-.03em] leading-[110%] text-black">Here's What I've Been Up To.</h2></div><div class="  flex flex-col  md:grid grid-cols-1  md:grid-cols-2 gap-8  w-full"><a href="/projects/pxxl" class="w-full rounded-[20px] overflow-hidden border-[1.5px]  border-[#0000001a] relative transition-all" style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;"><div class="px-5 pt-5 pb-4 rounded-[20px] group"><div class="relative w-full h-[200px] border   border-[#00000015] rounded-[20px] overflow-hidden "><img alt="Pxxl App Cloud Deployment Platform" loading="lazy" width="800" height="600" decoding="async" data-nimg="1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" srcset="/_next/image?url=%2Fpxxl.png&amp;w=828&amp;q=75 1x, /_next/image?url=%2Fpxxl.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2Fpxxl.png&amp;w=1920&amp;q=75" style="color: transparent;"></div></div><div class="px-7 pb-7"><h3 class="text-[24px] font-semibold mb-2">Pxxl App</h3><p class="text-[#5a5a5a] text-[16px] line-clamp-2">Enterprise-grade cloud deployment platform enabling instant deployment of websites, APIs, and databases with zero configuration</p><button class="mt-5 bg-[#f2f2f2] hover:bg-[#e5e5e5] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-black text-start no-underline transition-all duration-500 group"><span class="flex items-center group-hover:pr-2 font-medium text-[15px] transition-all duration-300">View Project</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></a><a href="/projects/olamide" class="w-full rounded-[20px] overflow-hidden border-[1.5px]  border-[#0000001a] relative transition-all" style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;"><div class="px-5 pt-5 pb-4 rounded-[20px] group"><div class="relative w-full h-[200px] border   border-[#00000015] rounded-[20px] overflow-hidden "><img alt="Olamide's Tour Website" loading="lazy" width="800" height="600" decoding="async" data-nimg="1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" srcset="/_next/image?url=%2Folamide.png&amp;w=828&amp;q=75 1x, /_next/image?url=%2Folamide.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2Folamide.png&amp;w=1920&amp;q=75" style="color: transparent;"></div></div><div class="px-7 pb-7"><h3 class="text-[24px] font-semibold mb-2">Olamide's Tour Website</h3><p class="text-[#5a5a5a] text-[16px] line-clamp-2">Official site for Nigerian Musician: Olamide (Badoo), featuring tour schedules, ticket purchases, and event information</p><button class="mt-5 bg-[#f2f2f2] hover:bg-[#e5e5e5] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-black text-start no-underline transition-all duration-500 group"><span class="flex items-center group-hover:pr-2 font-medium text-[15px] transition-all duration-300">View Project</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></a><a href="/projects/uncutxtra-vote" class="w-full rounded-[20px] overflow-hidden border-[1.5px]  border-[#0000001a] relative transition-all" style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;"><div class="px-5 pt-5 pb-4 rounded-[20px] group"><div class="relative w-full h-[200px] border   border-[#00000015] rounded-[20px] overflow-hidden "><img alt="UNCUTXTRA Awards Voting" loading="lazy" width="800" height="600" decoding="async" data-nimg="1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" srcset="/_next/image?url=%2Funcutxtra.png&amp;w=828&amp;q=75 1x, /_next/image?url=%2Funcutxtra.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2Funcutxtra.png&amp;w=1920&amp;q=75" style="color: transparent;"></div></div><div class="px-7 pb-7"><h3 class="text-[24px] font-semibold mb-2">Uncutxtra Awards Voting</h3><p class="text-[#5a5a5a] text-[16px] line-clamp-2">Official voting platform for UNCUTXTRA Award Night 4.0</p><button class="mt-5 bg-[#f2f2f2] hover:bg-[#e5e5e5] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-black text-start no-underline transition-all duration-500 group"><span class="flex items-center group-hover:pr-2 font-medium text-[15px] transition-all duration-300">View Project</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></a><a href="/projects/emojidb" class="w-full rounded-[20px] overflow-hidden border-[1.5px]  border-[#0000001a] relative transition-all" style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;"><div class="px-5 pt-5 pb-4 rounded-[20px] group"><div class="relative w-full h-[200px] border   border-[#00000015] rounded-[20px] overflow-hidden "><img alt="EmojiDB - Secure Emoji-Based Database" loading="lazy" width="800" height="600" decoding="async" data-nimg="1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" srcset="/_next/image?url=%2Femojidb.png&amp;w=828&amp;q=75 1x, /_next/image?url=%2Femojidb.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2Femojidb.png&amp;w=1920&amp;q=75" style="color: transparent;"></div></div><div class="px-7 pb-7"><h3 class="text-[24px] font-semibold mb-2">EmojiDB</h3><p class="text-[#5a5a5a] text-[16px] line-clamp-2">A lightweight, secure database that encrypts your data and encodes it into emojis.</p><button class="mt-5 bg-[#f2f2f2] hover:bg-[#e5e5e5] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-black text-start no-underline transition-all duration-500 group"><span class="flex items-center group-hover:pr-2 font-medium text-[15px] transition-all duration-300">View Project</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></a><div class="col-span-2 w-full"><a href="/projects"><button class="mt-4 mx-auto bg-[#000] hover:bg-[#121212] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-white text-start no-underline transition-all duration-500 group"><span class="flex items-center group-hover:pr-2 font-medium text-[16px] transition-all duration-300">View All</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></a></div></div></div>

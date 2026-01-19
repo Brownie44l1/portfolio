@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdulmalik Apata | Creative Software Engineer</title>
-    <meta name="description" content="Abdulmalik Apata - Software Engineer creating innovative solutions and captivating designs">
+    <title>Abdulmalik Apata | Backend Software Engineer</title>
+    <meta name="description" content="Abdulmalik Apata - Backend Software Engineer specializing in distributed and fault-tolerant systems">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -32,7 +32,6 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="bg-white dark:bg-black transition-colors duration-300 font-satoshi">
-    <!-- Fixed Header with Glass Distortion Filter -->
     <!-- SVG Filter Definition -->
     <svg style="display:none">
         <filter id="glass-distortion" x="-50%" y="-50%" width="200%" height="200%">
@@ -41,18 +40,19 @@
         </filter>
     </svg>
 
-    <header class="fixed top-[10px] md:top-[25px] w-full z-50 flex justify-center p-4">
-        <div class="liquidGlass-wrapper bg-[#ffffff80] rounded-[20px] border border-zinc-200">
+    <!-- Fixed Header with Glass Effect -->
+    <header class="fixed top-[10px] md:top-[25px] w-full z-50 flex justify-center px-4">
+        <div class="liquidGlass-wrapper bg-[#ffffff80] dark:bg-[#00000080] rounded-[20px] border border-zinc-200 dark:border-zinc-800">
             <div class="liquidGlass-effect"></div>
             <div class="liquidGlass-tint"></div>
             <div class="liquidGlass-shine"></div>
             <nav id="main-nav" class="liquidGlass-text flex items-center gap-1 p-[6px] relative z-10">
-                <!-- Your navigation content here -->
+                <!-- Navigation will be injected by JavaScript -->
             </nav>
         </div>
     </header>
 
-    <!-- Extended Vertical Lines -->
+    <!-- Vertical Lines -->
     <div class="fixed mx-auto max-w-[53rem] left-0 right-0 h-full pointer-events-none z-0">
         <div class="absolute left-0 top-0 h-full w-[1px] bg-black/10 dark:bg-white/10"></div>
         <div class="absolute right-0 top-0 h-full w-[1px] bg-black/10 dark:bg-white/10"></div>
@@ -68,30 +68,37 @@
             </div>
 
             <div class="text-start" style="opacity: 1; transform: none;">
-                <h1 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black text-start no-underline normal-case mb-2 md:mb-2">
+                <h1 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white text-start no-underline normal-case mb-2 md:mb-2">
                     <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Hey,</span>
                     <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">I'm</span>
                     <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Abdulmalik</span>
                     <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Apata.</span>
                 </h1>
                 
-                <h2 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black text-start no-underline normal-case">
+                <h2 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white text-start no-underline normal-case">
                     <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">A</span>
-                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Software</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Backend</span>
                     <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Engineer</span>
                 </h2>
-                <p class="text-[16px] text-[#5a5a5a] font-satoshi text-start mt-[25px] no-underline normal-case" style="opacity: 1; transform: none;">Creating innovative solutions and captivating designs.<br>University student by day, visionary creator by night.</p>
+                <p class="text-[16px] text-[#5a5a5a] dark:text-zinc-400 font-satoshi text-start mt-[25px] no-underline normal-case" style="opacity: 1; transform: none;">
+                    Building robust, scalable distributed systems.<br>
+                    Computer Science student by day, systems architect by night.
+                </p>
             </div>
 
             <div class="flex gap-4" style="opacity: 1; transform: none;">
-                <button class="bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 duration-[300ms] transition-all hover:px-[28px] ml-1 font-satoshi font-medium">Hire Me!</button>
+                <a href="#contact-form">
+                    <button class="bg-black dark:bg-white text-white dark:text-black py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 duration-[300ms] transition-all hover:px-[28px] ml-1 font-satoshi font-medium">
+                        Hire Me!
+                    </button>
+                </a>
 
-                <div class="flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] text-[#178d00]">
+                <div class="flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] dark:bg-[#1a2e1a] text-[#178d00] dark:text-[#4ade80]">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#178d00] dark:bg-[#4ade80] opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-[#178d00] dark:bg-[#4ade80]"></span>
                     </span>
-                    <span class="hidden md:flex">Available for new project</span>
+                    <span class="hidden md:flex">Available for new projects</span>
                     <span class="md:hidden">Available</span>
                 </div>
             </div>
@@ -110,18 +117,19 @@
 
             <div class="flex flex-col gap-5">
                 <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 font-satoshi">
-                    I craft scalable products with exceptional user experiences, 
-                    focusing on innovation and problem-solving.
+                    I specialize in backend engineering with a deep focus on building distributed systems 
+                    and fault-tolerant architectures that scale.
                 </p>
 
                 <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 font-satoshi">
-                    I'm Robinson Honour, a 19-year-old Nigerian software developer with 7.5+ years 
-                    of experience in web development, robotics, and cloud computing.
+                    I'm Abdulmalik Apata, a passionate backend developer dedicated to mastering the intricacies 
+                    of system design, microservices, and cloud-native applications. My journey in software 
+                    engineering is driven by a fascination with how systems handle complexity at scale.
                 </p>
 
                 <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 font-satoshi">
-                    A self-taught programmer and active tech content creator, I'm the CEO and founder 
-                    of Pxxl App, a cloud deployment platform.
+                    Currently exploring distributed consensus algorithms, message queues, and event-driven 
+                    architectures while continuously learning from real-world production challenges.
                 </p>
 
                 <!-- Polaroid Photos -->
@@ -130,18 +138,18 @@
                         <div class="w-[150px] md:w-[200px] h-[150px] md:h-[200px]">
                             <img alt="About image 1" loading="lazy" width="200" height="200" 
                                  class="object-cover rounded-lg w-full h-full" 
-                                 src="assets/image.png">
+                                 src="assets/profile.png">
                         </div>
-                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black dark:text-white w-full text-center font-satoshi">@ikwerre-dev</span>
+                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black dark:text-white w-full text-center font-satoshi">@belmont_browne</span>
                     </div>
 
                     <div class="absolute top-10 right-[20%] bg-white dark:bg-zinc-900 px-2 pt-2 rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:rotate-12 group-hover:translate-x-4 group-hover:scale-105">
                         <div class="w-[150px] md:w-[200px] h-[150px] md:h-[200px]">
                             <img alt="About image 2" loading="lazy" width="200" height="200" 
                                  class="object-cover w-full h-full" 
-                                 src="assets/image.png">
+                                 src="assets/profile.png">
                         </div>
-                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black dark:text-white w-full text-center font-satoshi">@codewithhonour</span>
+                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black dark:text-white w-full text-center font-satoshi">@Brownie44l1</span>
                     </div>
                 </div>
             </div>
@@ -152,13 +160,13 @@
             <!-- Tech Stack Marquee Container -->
             <div class="w-[10rem] overflow-hidden relative marquee-fade">
                 <div id="tech-marquee" class="flex items-center">
-                    <!--Tech Stack Marquee -->
+                    <!-- Tech Stack Marquee -->
                 </div>
             </div>
             
             <div class="flex items-center gap-2 mb-8">
                 <h2 class="text-2xl md:text-3xl lg:text-[32px] text-center font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white font-jakarta">
-                    Here's What I've Been Up To.
+                    Here's What I've Been Building.
                 </h2>
             </div>
             
@@ -167,13 +175,12 @@
             </div>
         </div>
 
-        <!--Work Experience Section -->
-
+        <!-- Work Experience Section -->
         <div class="w-full max-w-[53rem] flex flex-col pb-[58px] px-[1.5rem] md:px-[8rem] items-center gap-[25px] md:gap-[25px]">
             <div class="w-full max-w-[53rem] pt-[100px] md:pt-[154px] flex flex-col items-start">
                 
-                <div class="flex w-full h-[1px] bg-[#E5E5E5] mb-[50px] md:mb-[100px]"></div>
-                <h2 class="text-[22px] font-bold tracking-[-.03em] leading-[110%] text-black mb-[40px]">
+                <div class="flex w-full h-[1px] bg-[#E5E5E5] dark:bg-zinc-800 mb-[50px] md:mb-[100px]"></div>
+                <h2 class="text-[22px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white mb-[40px]">
                     Work Experience
                 </h2>
                 
@@ -182,88 +189,47 @@
                     
                     <!-- Experience Item 1 -->
                     <div class="flex flex-col md:flex-row gap-[15px] md:gap-0 md:items-center md:justify-between">
-                        <div class="text-[#8F8F8F] font-medium text-[13px]">
-                            Sept 2024-Present
+                        <div class="text-[#8F8F8F] dark:text-zinc-500 font-medium text-[13px]">
+                            Dec 2024-Present
                         </div>
                         <div class="flex items-center gap-2">
-                            <div class="text-[16px] text-black md:text-[#5a5a5a] font-medium">
-                                Founder &amp; CEO at
+                            <div class="text-[16px] text-black md:text-[#5a5a5a] dark:text-zinc-400 font-medium">
+                                Freelancing on the
                             </div>
-                            <div class="flex items-center gap-1 bg-[#EEF4FF] text-[#3B82F6] px-3 py-1 rounded-md">
-                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] flex items-center justify-center">
+                            <div class="flex items-center gap-1 bg-[#EEF4FF] dark:bg-blue-950 text-[#3B82F6] dark:text-blue-400 px-3 py-1 rounded-md">
+                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] dark:bg-blue-400 flex items-center justify-center">
                                     <svg width="5" height="5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5 0L9.33013 2.5V7.5L5 10L0.669873 7.5V2.5L5 0Z" fill="white"></path>
                                     </svg>
                                 </div>
-                                <span>Pxxl App</span>
+                                <span>Internet</span>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Experience Item 2 -->
                     <div class="flex flex-col md:flex-row gap-[15px] md:gap-0 md:items-center md:justify-between">
-                        <div class="text-[#8F8F8F] font-medium text-[13px]">
-                            2025-Present
+                        <div class="text-[#8F8F8F] dark:text-zinc-500 font-medium text-[13px]">
+                            Dec 2023-March 2024
                         </div>
                         <div class="flex items-center gap-2">
-                            <div class="text-[16px] text-black md:text-[#5a5a5a] font-medium">
-                                Frontend Developer at
+                            <div class="text-[16px] text-black md:text-[#5a5a5a] dark:text-zinc-400 font-medium">
+                                Frontend Intern at
                             </div>
-                            <div class="flex items-center gap-1 bg-[#EEF4FF] text-[#3B82F6] px-3 py-1 rounded-md">
-                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] flex items-center justify-center">
+                            <div class="flex items-center gap-1 bg-[#EEF4FF] dark:bg-blue-950 text-[#3B82F6] dark:text-blue-400 px-3 py-1 rounded-md">
+                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] dark:bg-blue-400 flex items-center justify-center">
                                     <svg width="5" height="5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5 0L9.33013 2.5V7.5L5 10L0.669873 7.5V2.5L5 0Z" fill="white"></path>
                                     </svg>
                                 </div>
-                                <span>Steadfast Int.</span>
+                                <span>Deazy Tech Solutions</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Experience Item 3 -->
-                    <div class="flex flex-col md:flex-row gap-[15px] md:gap-0 md:items-center md:justify-between">
-                        <div class="text-[#8F8F8F] font-medium text-[13px]">
-                            2024-Present
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <div class="text-[16px] text-black md:text-[#5a5a5a] font-medium">
-                                Fullstack Developer at
-                            </div>
-                            <div class="flex items-center gap-1 bg-[#EEF4FF] text-[#3B82F6] px-3 py-1 rounded-md">
-                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] flex items-center justify-center">
-                                    <svg width="5" height="5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 0L9.33013 2.5V7.5L5 10L0.669873 7.5V2.5L5 0Z" fill="white"></path>
-                                    </svg>
-                                </div>
-                                <span>TheEccomerceBoss</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Experience Item 4 -->
-                    <div class="flex flex-col md:flex-row gap-[15px] md:gap-0 md:items-center md:justify-between">
-                        <div class="text-[#8F8F8F] font-medium text-[13px]">
-                            2019-2022
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <div class="text-[16px] text-black md:text-[#5a5a5a] font-medium">
-                                Backend Developer at
-                            </div>
-                            <div class="flex items-center gap-1 bg-[#EEF4FF] text-[#3B82F6] px-3 py-1 rounded-md">
-                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] flex items-center justify-center">
-                                    <svg width="5" height="5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 0L9.33013 2.5V7.5L5 10L0.669873 7.5V2.5L5 0Z" fill="white"></path>
-                                    </svg>
-                                </div>
-                                <span>OrganStation</span>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
                 
                 <!-- Bottom Divider -->
-                <div class="flex w-full h-[1px] bg-[#E5E5E5] my-[50px] md:my-[100px]"></div>
+                <div class="flex w-full h-[1px] bg-[#E5E5E5] dark:bg-zinc-800 my-[50px] md:my-[100px]"></div>
                 
             </div>
         </div>
@@ -273,7 +239,7 @@
             <div class="relative bg-black dark:bg-zinc-950 px-[1rem] md:px-[5rem] py-[4rem] md:py-[5rem] w-full overflow-hidden">
                 <!-- Background Pattern -->
                 <img alt="Doodle" loading="lazy" decoding="async" 
-                     class="absolute object-cover top-0 left-0 pointer-events-none w-full h-full" 
+                     class="absolute object-cover top-0 left-0 pointer-events-none w-full h-full opacity-50" 
                      src="assets/doodles.jpg">
                 
                 <div class="relative z-10">
@@ -281,7 +247,7 @@
                         How Can I Help?
                     </h2>
                     <p class="text-[15px] md:text-[18px] text-zinc-400 text-center w-full mb-[32px] md:mb-[40px] font-satoshi">
-                        Let's turn your vision into something amazing.
+                        Let's build something reliable and scalable together.
                     </p>
                     
                     <!-- Skills Marquee -->
@@ -304,8 +270,8 @@
                     Get in touch
                 </h2>
                 <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 mb-[24px] md:mb-[32px] max-w-[600px] font-satoshi">
-                    I'm always interested in exploring new opportunities, collaborating, or exchanging ideas. 
-                    Feel free to book a call or email me to discuss a potential project.
+                    I'm always interested in exploring new opportunities, collaborating on interesting projects, 
+                    or discussing distributed systems. Feel free to reach out!
                 </p>
                 
                 <form id="contact-form-element" class="w-full flex flex-col gap-4">
@@ -335,13 +301,14 @@
                     
                     <button 
                         type="submit" 
+                        id="submit-btn"
                         class="bg-black dark:bg-white relative text-white dark:text-black py-[12px] md:py-[14px] px-[20px] md:px-[24px] rounded-[14px] text-[14px] md:text-[16px] font-medium hover:opacity-90 duration-[300ms] transition-all w-full disabled:opacity-70 overflow-hidden font-satoshi"
                     >
                         <img 
                             alt="Doodle" 
                             loading="lazy" 
                             decoding="async" 
-                            class="absolute object-cover top-0 left-0 w-full h-full pointer-events-none" 
+                            class="absolute object-cover top-0 left-0 w-full h-full pointer-events-none opacity-30" 
                             src="assets/doodles.jpg"
                         >
                         <span class="relative z-10">Send Message</span>
@@ -352,7 +319,7 @@
             <!-- Footer -->
             <div class="w-full py-[30px] md:py-[40px] flex flex-col items-center gap-[16px] border-t border-zinc-200 dark:border-zinc-800">
                 <p class="text-[13px] md:text-[14px] text-center text-zinc-600 dark:text-zinc-400 font-satoshi">
-                    Copyright © 2025 Abdulmalik Apata.
+                    Copyright © 2025 Abdulmalik Apata. All rights reserved.
                 </p>
                 
                 <div id="social-links" class="flex gap-6 py-1">
