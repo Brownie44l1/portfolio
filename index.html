@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robinson Honour | Creative Software Engineer</title>
+    <meta name="description" content="Robinson Honour - Software Engineer creating innovative solutions and captivating designs">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+        }
+        
+        @layer utilities {
+            .gradient-text {
+                background: linear-gradient(to right, #3b82f6, #8b5cf6);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            
+            .animate-fade-in {
+                animation: fadeIn 0.6s ease-in;
+            }
+            
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .project-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .project-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            
+            .nav-link {
+                position: relative;
+                transition: color 0.3s ease;
+            }
+            
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -4px;
+                left: 0;
+                background-color: #3b82f6;
+                transition: width 0.3s ease;
+            }
+            
+            .nav-link:hover::after {
+                width: 100%;
+            }
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .marquee-container {
+            display: flex;
+            animation: marquee 60s linear infinite;
+        }
+        
+        .marquee-container:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes tech-marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .tech-marquee-container {
+            display: flex;
+            animation: tech-marquee 20s linear infinite;
+        }
+        
+        .tech-marquee-container:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg:white">
+    <!-- Fixed Header -->
+    <header class="fixed top-[10px] md:top-[25px] w-full z-50 flex justify-center p-4">
+        <div class="liquidGlass-wrapper bg-[#ffffff80] rounded-[20px] border border-zinc-200">
+            <!-- Glass effect layers -->
+            <div class="liquidGlass-effect"></div>
+            <div class="liquidGlass-tint"></div>
+            <div class="liquidGlass-shine"></div>
+            
+            <!-- Navigation content -->
+            <nav class="liquidGlass-text flex items-center gap-1 p-[6px] relative z-10">
+                <!-- Home Link -->
+                <div class="flex items-center">
+                    <a href="/" 
+                       target="_self" 
+                       class="p-[15px] hover:px-[20px] hover:mr-1 text-zinc-600 hover:text-zinc-900 relative group transition-all duration-[300ms] hover:bg-[#ededed]/20 rounded-[15px]">
+                        <!-- Home Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                             width="20" 
+                             height="20" 
+                             viewBox="0 0 24 24" 
+                             fill="none" 
+                             stroke="currentColor" 
+                             stroke-width="2" 
+                             stroke-linecap="round" 
+                             stroke-linejoin="round" 
+                             class="lucide lucide-house" 
+                             aria-hidden="true">
+                            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        </svg>
+                        <!-- Tooltip -->
+                        <span class="absolute -bottom-12 left-1/2 -translate-x-1/2 px-3 py-1 bg-zinc-800 text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                            Home
+                        </span>
+                    </a>
+                    <!-- Divider -->
+                    <div class="h-5 w-[1px] bg-zinc-200 md:mx-2"></div>
+                </div>
+
+                <!-- Twitter Link -->
+                <div class="flex items-center">
+                    <a href="https://x.com/@honour_can_code" 
+                       target="_blank" 
+                       class="p-[15px] hover:px-[20px] hover:mr-1 text-zinc-600 hover:text-zinc-900 relative group transition-all duration-[300ms] hover:bg-[#ededed]/20 rounded-[15px]">
+                        <!-- Twitter/X Icon -->
+                        <svg stroke="currentColor" 
+                             fill="currentColor" 
+                             stroke-width="0" 
+                             viewBox="0 0 16 16" 
+                             height="17" 
+                             width="17" 
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path>
+                        </svg>
+                        <!-- Tooltip -->
+                        <span class="absolute -bottom-12 left-1/2 -translate-x-1/2 px-3 py-1 bg-zinc-800 text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                            Twitter
+                        </span>
+                    </a>
+                </div>
+
+                <!-- GitHub Link -->
+                <div class="flex items-center">
+                    <a href="/github" 
+                       target="_self" 
+                       class="p-[15px] hover:px-[20px] hover:mr-1 text-zinc-600 hover:text-zinc-900 relative group transition-all duration-[300ms] hover:bg-[#ededed]/20 rounded-[15px]">
+                        <!-- GitHub Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                             width="20" 
+                             height="20" 
+                             viewBox="0 0 24 24" 
+                             fill="none" 
+                             stroke="currentColor" 
+                             stroke-width="2" 
+                             stroke-linecap="round" 
+                             stroke-linejoin="round" 
+                             class="lucide lucide-github" 
+                             aria-hidden="true">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                        <!-- Tooltip -->
+                        <span class="absolute -bottom-12 left-1/2 -translate-x-1/2 px-3 py-1 bg-zinc-800 text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                            Github
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Resume Link -->
+                <div class="flex items-center">
+                    <a href="/resume.pdf" 
+                       target="_blank" 
+                       download 
+                       class="p-[15px] hover:px-[20px] hover:mr-1 text-zinc-600 hover:text-zinc-900 relative group transition-all duration-[300ms] hover:bg-[#ededed]/20 rounded-[15px]">
+                        <!-- File Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                             width="20" 
+                             height="20" 
+                             viewBox="0 0 24 24" 
+                             fill="none" 
+                             stroke="currentColor" 
+                             stroke-width="2" 
+                             stroke-linecap="round" 
+                             stroke-linejoin="round" 
+                             class="lucide lucide-file-text" 
+                             aria-hidden="true">
+                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                            <path d="M10 9H8"></path>
+                            <path d="M16 13H8"></path>
+                            <path d="M16 17H8"></path>
+                        </svg>
+                        <!-- Tooltip -->
+                        <span class="absolute -bottom-12 left-1/2 -translate-x-1/2 px-3 py-1 bg-zinc-800 text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                            Resume
+                        </span>
+                    </a>
+                    <!-- Divider -->
+                    <div class="h-5 w-[1px] bg-zinc-200 md:mx-2"></div>
+                </div>
+
+                <!-- Blog CTA Button -->
+                <a href="/blog" 
+                   class="bg-black text-white py-[14px] px-[20px] md:px-[22px] rounded-[14px] text-sm hover:opacity-90 duration-[300ms] transition-all hover:px-[28px] ml-2 md:ml-1">
+                    <span class="hidden md:flex">My Blog</span>
+                    <span class="md:hidden">Blog</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="relative mx-auto max-w-[53rem]  h-full">
+        <div class="absolute left-0 top-0 h-screen w-[1px] bg-[#0000001a]"></div>
+        <div class="absolute right-0 top-0 h-screen w-[1px] bg-[#0000001a]"></div>
+    </div>
+
+    <main class="flex flex-col relative items-center mx-auto">
+        <!-- Hero Section -->
+        <div class="w-full max-w-[53rem] p-6 flex flex-col pt-[150px] md:pt-[188px] pb-[2rem] md:pb-[3rem] px-[1.5rem] md:px-[8rem] items-start gap-[25px]">
+
+            <!-- Profile Picture -->
+            <div style="opacity: 1; transform: none;">
+                <img 
+                    alt="Profile picture" 
+                    width="100" 
+                    height="100" 
+                    decoding="async" 
+                    class="rounded-full aspect-square border-2 border-black" 
+                    src="/profile.jpg"
+                    srcset="/profile.jpg 1x, /profile.jpg 2x"
+                >
+            </div>
+
+            <!-- Text Content -->
+            <div class="text-start" style="opacity: 1; transform: none;">
+                <!-- Main Heading -->
+                <h1 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black text-start no-underline normal-case mb-2 md:mb-2">
+                    <span class="inline-block mr-[0.2em]">Hey,</span>
+                    <span class="inline-block mr-[0.2em]">I'm</span>
+                    <span class="inline-block mr-[0.2em]">Robinson</span>
+                    <span class="inline-block mr-[0.2em]">Honour.</span>
+                </h1>
+
+                <!-- Subheading -->
+                <h2 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black text-start no-underline normal-case">
+                    <span class="inline-block mr-[0.2em]">Software</span>
+                    <span class="inline-block mr-[0.2em]">Engineer</span>
+                </h2>
+
+                <!-- Description -->
+                <p class="text-[16px] text-[#5a5a5a] text-start mt-[25px] no-underline normal-case">
+                    Creating innovative solutions and captivating designs.<br>
+                    University student by day, visionary creator by night.
+                </p>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex gap-4" style="opacity: 1; transform: none;">
+                <!-- Hire Me Button -->
+                <button class="bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 duration-[300ms] transition-all hover:px-[28px] ml-1">
+                    Hire Me!
+                </button>
+
+                <!-- Availability Badge -->
+                <div class="flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] text-[#178d00]">
+                    <!-- Status Dot -->
+                    <div class="w-2 h-2 bg-[#178d00] rounded-full"></div>
+                    <!-- Text (Responsive) -->
+                    <span class="hidden md:flex">Available for new project</span>
+                    <span class="md:hidden">Available</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Infinite Marquee Carousel -->
+        <div class="w-full overflow-hidden">
+            <div class="flex gap-6 py-4 marquee-container">
+                <!-- Project Card 1: Pxxl App -->
+                <div class="flex px-4 md:px-3 flex-shrink-0">
+                    <div class="flex min-w-[400px] md:min-w-[400px] w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] bg-[#fafafa] relative transition-all hover:scale-[1.02] cursor-pointer"
+                        style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;">
+                        
+                        <!-- Image Container -->
+                        <div class="p-8 rounded-[10px]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 16px -3px;">
+                            <div class="relative" 
+                                style="filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 10px 7px);">
+                                <img alt="Pxxl App" 
+                                    draggable="false" 
+                                    loading="lazy" 
+                                    width="400" 
+                                    height="400" 
+                                    class="w-full h-[250px] object-cover rounded-[10px]" 
+                                    src="/pxxl.png"
+                                    srcset="/pxxl.png 1x, /pxxl.png 2x"
+                                >
+                            </div>
+                        </div>
+                        
+                        <!-- Corner Dots -->
+                        <div class="absolute w-2 h-2 top-4 left-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 bottom-4 left-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 top-4 right-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 bottom-4 right-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Olamide's Tour -->
+                <div class="flex px-4 md:px-3 flex-shrink-0">
+                    <div class="flex min-w-[400px] md:min-w-[400px] w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] bg-[#fafafa] relative transition-all hover:scale-[1.02] cursor-pointer"
+                        style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;">
+                        <div class="p-8 rounded-[10px]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 16px -3px;">
+                            <div class="relative" 
+                                style="filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 10px 7px);">
+                                <img 
+                                    alt="Olamide's Tour Website" 
+                                    draggable="false" 
+                                    loading="lazy" 
+                                    width="400" 
+                                    height="400" 
+                                    class="w-full h-[250px] object-cover rounded-[10px]" 
+                                    src="/olamide.png"
+                                >
+                            </div>
+                        </div>
+                        <div class="absolute w-2 h-2 top-4 left-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 bottom-4 left-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 top-4 right-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 bottom-4 right-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Uncutxtra Awards -->
+                <div class="flex px-4 md:px-3 flex-shrink-0">
+                    <div class="flex min-w-[400px] md:min-w-[400px] w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] bg-[#fafafa] relative transition-all hover:scale-[1.02] cursor-pointer"
+                        style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;">
+                        <div class="p-8 rounded-[10px]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 16px -3px;">
+                            <div class="relative" 
+                                style="filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 10px 7px);">
+                                <img 
+                                    alt="Uncutxtra Awards Voting" 
+                                    draggable="false" 
+                                    loading="lazy" 
+                                    width="400" 
+                                    height="400" 
+                                    class="w-full h-[250px] object-cover rounded-[10px]" 
+                                    src="/uncutxtra.png"
+                                >
+                            </div>
+                        </div>
+                        <div class="absolute w-2 h-2 top-4 left-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 bottom-4 left-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 top-4 right-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 bottom-4 right-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: EmojiDB -->
+                <div class="flex px-4 md:px-3 flex-shrink-0">
+                    <div class="flex min-w-[400px] md:min-w-[400px] w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] bg-[#fafafa] relative transition-all hover:scale-[1.02] cursor-pointer"
+                        style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;">
+                        <div class="p-8 rounded-[10px]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 16px -3px;">
+                            <div class="relative" 
+                                style="filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 10px 7px);">
+                                <img 
+                                    alt="EmojiDB" 
+                                    draggable="false" 
+                                    loading="lazy" 
+                                    width="400" 
+                                    height="400" 
+                                    class="w-full h-[250px] object-cover rounded-[10px]" 
+                                    src="/emojidb.png"
+                                >
+                            </div>
+                        </div>
+                        <div class="absolute w-2 h-2 top-4 left-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 bottom-4 left-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 top-4 right-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 bottom-4 right-4 rounded-full bg-[#e6e6e6]" 
+                            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                    </div>
+                </div>
+
+                <!-- Duplicate cards for seamless loop (repeat the 4 cards above) -->
+                <!-- Card 1 duplicate -->
+                <div class="flex px-4 md:px-3 flex-shrink-0">
+                    <div class="flex min-w-[400px] md:min-w-[400px] w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] bg-[#fafafa] relative transition-all hover:scale-[1.02] cursor-pointer"
+                        style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;">
+                        <div class="p-8 rounded-[10px]" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 16px -3px;">
+                            <div class="relative" style="filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 10px 7px);">
+                                <img alt="Pxxl App" draggable="false" loading="lazy" width="400" height="400" class="w-full h-[250px] object-cover rounded-[10px]" src="/pxxl.png">
+                            </div>
+                        </div>
+                        <div class="absolute w-2 h-2 top-4 left-4 rounded-full bg-[#e6e6e6]" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 bottom-4 left-4 rounded-full bg-[#e6e6e6]" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 top-4 right-4 rounded-full bg-[#e6e6e6]" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                        <div class="absolute w-2 h-2 bottom-4 right-4 rounded-full bg-[#e6e6e6]" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgb(255, 255, 255) 0px -0.5px 0px 0px inset;"></div>
+                    </div>
+                </div>
+                
+                <!-- Add remaining duplicates for cards 2, 3, 4 as needed -->
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="w-full max-w-[53rem] p-6 flex flex-col py-[100px] md:py-[158px] px-[1.5rem] md:px-[8rem] items-start gap-[25px]">
+            
+            <!-- Section Title -->
+            <h2 class="text-[25px] md:text-[32px] font-bold tracking-[-.03em] leading-[110%] text-black">
+                About
+            </h2>
+
+            <!-- Content -->
+            <div class="flex flex-col gap-6">
+                <!-- Paragraph 1 -->
+                <p class="text-[16px] font-normal md:tracking-[.01em] md:leading-[1.4em] text-[#5a5a5a]">
+                    I like to craft solid and scalable products with exceptional user experiences, 
+                    focusing on innovation and problem-solving across various industries.
+                </p>
+
+                <!-- Paragraph 2 -->
+                <p class="text-[16px] font-normal md:tracking-[.01em] md:leading-[1.4em] text-[#5a5a5a]">
+                    I'm Robinson Honour, a 19-year-old Nigerian software developer, with 7.5+ years 
+                    of experience in web development, app development, robotics, cloud computing, 
+                    and game development. I specialize in building robust applications, cloud platforms, 
+                    and cutting-edge robotics solutions.
+                </p>
+
+                <!-- Paragraph 3 -->
+                <p class="text-[16px] font-normal md:tracking-[.01em] md:leading-[1.4em] text-[#5a5a5a]">
+                    A self-taught programmer, ranked among the top programmers in Port Harcourt, Nigeria, 
+                    I am an active tech content creator, speaker, and mentor passionate about empowering 
+                    others in tech. I'm also the CEO and founder of Pxxl App, a cloud deployment platform 
+                    for websites, APIs, and databases.
+                </p>
+
+                <!-- Polaroid Photo Gallery -->
+                <div class="relative w-full h-[250px] mt-8 group">
+                    
+                    <!-- Left Photo (Rotated Left) -->
+                    <div class="absolute top-0 left-[20%] bg-white px-2 pt-2 -rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:-rotate-12 group-hover:-translate-x-4 group-hover:scale-105">
+                        <div class="w-[200px] h-[200px]">
+                            <img 
+                                alt="About image 1" 
+                                loading="lazy" 
+                                width="200" 
+                                height="200" 
+                                class="object-cover rounded-lg w-full h-full" 
+                                src="/about1.png"
+                                srcset="/about1.png 1x, /about1.png 2x"
+                            >
+                        </div>
+                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black w-full text-center">
+                            @ikwerre-dev
+                        </span>
+                    </div>
+
+                    <!-- Right Photo (Rotated Right) -->
+                    <div class="absolute top-10 right-[20%] bg-white px-2 pt-2 rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:rotate-12 group-hover:translate-x-4 group-hover:scale-105">
+                        <div class="w-[200px] h-[200px]">
+                            <img 
+                                alt="About image 2" 
+                                loading="lazy" 
+                                width="200" 
+                                height="200" 
+                                class="object-cover w-full h-full" 
+                                src="/about2.png"
+                                srcset="/about2.png 1x, /about2.png 2x"
+                            >
+                        </div>
+                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black w-full text-center">
+                            @codewithhonour
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Infinite Marquee -->
+            <div class="w-[10rem] overflow-hidden relative">
+                <div id="tech-marquee" class="flex items-center"></div>
+            </div>
+
+            <div class="flex items-center gap-2 mb-8">
+                <h2 class="text-[32px] text-center  font-bold tracking-[-.03em] leading-[110%] text-black">Here's What I've Been Up To.</h2>
+            </div>
+
+            <div class="  flex flex-col  md:grid grid-cols-1  md:grid-cols-2 gap-8  w-full"><a href="/projects/pxxl" class="w-full rounded-[20px] overflow-hidden border-[1.5px]  border-[#0000001a] relative transition-all" style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;"><div class="px-5 pt-5 pb-4 rounded-[20px] group"><div class="relative w-full h-[200px] border   border-[#00000015] rounded-[20px] overflow-hidden "><img alt="Pxxl App Cloud Deployment Platform" loading="lazy" width="800" height="600" decoding="async" data-nimg="1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" srcset="/_next/image?url=%2Fpxxl.png&amp;w=828&amp;q=75 1x, /_next/image?url=%2Fpxxl.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2Fpxxl.png&amp;w=1920&amp;q=75" style="color: transparent;"></div></div><div class="px-7 pb-7"><h3 class="text-[24px] font-semibold mb-2">Pxxl App</h3><p class="text-[#5a5a5a] text-[16px] line-clamp-2">Enterprise-grade cloud deployment platform enabling instant deployment of websites, APIs, and databases with zero configuration</p><button class="mt-5 bg-[#f2f2f2] hover:bg-[#e5e5e5] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-black text-start no-underline transition-all duration-500 group"><span class="flex items-center group-hover:pr-2 font-medium text-[15px] transition-all duration-300">View Project</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></a><a href="/projects/olamide" class="w-full rounded-[20px] overflow-hidden border-[1.5px]  border-[#0000001a] relative transition-all" style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;"><div class="px-5 pt-5 pb-4 rounded-[20px] group"><div class="relative w-full h-[200px] border   border-[#00000015] rounded-[20px] overflow-hidden "><img alt="Olamide's Tour Website" loading="lazy" width="800" height="600" decoding="async" data-nimg="1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" srcset="/_next/image?url=%2Folamide.png&amp;w=828&amp;q=75 1x, /_next/image?url=%2Folamide.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2Folamide.png&amp;w=1920&amp;q=75" style="color: transparent;"></div></div><div class="px-7 pb-7"><h3 class="text-[24px] font-semibold mb-2">Olamide's Tour Website</h3><p class="text-[#5a5a5a] text-[16px] line-clamp-2">Official site for Nigerian Musician: Olamide (Badoo), featuring tour schedules, ticket purchases, and event information</p><button class="mt-5 bg-[#f2f2f2] hover:bg-[#e5e5e5] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-black text-start no-underline transition-all duration-500 group"><span class="flex items-center group-hover:pr-2 font-medium text-[15px] transition-all duration-300">View Project</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></a><a href="/projects/uncutxtra-vote" class="w-full rounded-[20px] overflow-hidden border-[1.5px]  border-[#0000001a] relative transition-all" style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;"><div class="px-5 pt-5 pb-4 rounded-[20px] group"><div class="relative w-full h-[200px] border   border-[#00000015] rounded-[20px] overflow-hidden "><img alt="UNCUTXTRA Awards Voting" loading="lazy" width="800" height="600" decoding="async" data-nimg="1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" srcset="/_next/image?url=%2Funcutxtra.png&amp;w=828&amp;q=75 1x, /_next/image?url=%2Funcutxtra.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2Funcutxtra.png&amp;w=1920&amp;q=75" style="color: transparent;"></div></div><div class="px-7 pb-7"><h3 class="text-[24px] font-semibold mb-2">Uncutxtra Awards Voting</h3><p class="text-[#5a5a5a] text-[16px] line-clamp-2">Official voting platform for UNCUTXTRA Award Night 4.0</p><button class="mt-5 bg-[#f2f2f2] hover:bg-[#e5e5e5] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-black text-start no-underline transition-all duration-500 group"><span class="flex items-center group-hover:pr-2 font-medium text-[15px] transition-all duration-300">View Project</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></a><a href="/projects/emojidb" class="w-full rounded-[20px] overflow-hidden border-[1.5px]  border-[#0000001a] relative transition-all" style="box-shadow: rgb(255, 255, 255) 0px 3px 0px 0px inset;"><div class="px-5 pt-5 pb-4 rounded-[20px] group"><div class="relative w-full h-[200px] border   border-[#00000015] rounded-[20px] overflow-hidden "><img alt="EmojiDB - Secure Emoji-Based Database" loading="lazy" width="800" height="600" decoding="async" data-nimg="1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" srcset="/_next/image?url=%2Femojidb.png&amp;w=828&amp;q=75 1x, /_next/image?url=%2Femojidb.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2Femojidb.png&amp;w=1920&amp;q=75" style="color: transparent;"></div></div><div class="px-7 pb-7"><h3 class="text-[24px] font-semibold mb-2">EmojiDB</h3><p class="text-[#5a5a5a] text-[16px] line-clamp-2">A lightweight, secure database that encrypts your data and encodes it into emojis.</p><button class="mt-5 bg-[#f2f2f2] hover:bg-[#e5e5e5] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-black text-start no-underline transition-all duration-500 group"><span class="flex items-center group-hover:pr-2 font-medium text-[15px] transition-all duration-300">View Project</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></a><div class="col-span-2 w-full"><a href="/projects"><button class="mt-4 mx-auto bg-[#000] hover:bg-[#121212] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-white text-start no-underline transition-all duration-500 group"><span class="flex items-center group-hover:pr-2 font-medium text-[16px] transition-all duration-300">View All</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 w-5 h-5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></a></div></div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
