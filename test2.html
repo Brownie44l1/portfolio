@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulmalik Apata | Creative Software Engineer</title>
+    <meta name="description" content="Abdulmalik Apata - Software Engineer creating innovative solutions and captivating designs">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          darkMode: 'class',
+          theme: {
+            extend: {
+              fontFamily: {
+                satoshi: ['Satoshi', 'system-ui', 'sans-serif'],
+                jakarta: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+                inter: ['Inter', 'system-ui', 'sans-serif'],
+                mono: ['GeistMono', 'ui-monospace', 'monospace'],
+              },
+            },
+          },
+        }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"/>
+    
+    <link rel="stylesheet" href="test.css">
+</head>
+<body class="bg-white dark:bg-black transition-colors duration-300 font-satoshi">
+    <!-- Fixed Header with Glass Distortion Filter -->
+    <!-- SVG Filter Definition -->
+    <svg style="display:none">
+        <filter id="glass-distortion" x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="2" seed="10" result="turbulence"/>
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
+    <header class="fixed top-[10px] md:top-[25px] w-full z-50 flex justify-center p-4">
+        <div class="liquidGlass-wrapper bg-[#ffffff80] rounded-[20px] border border-zinc-200">
+            <div class="liquidGlass-effect"></div>
+            <div class="liquidGlass-tint"></div>
+            <div class="liquidGlass-shine"></div>
+            <nav id="main-nav" class="liquidGlass-text flex items-center gap-1 p-[6px] relative z-10">
+                <!-- Your navigation content here -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Extended Vertical Lines -->
+    <div class="fixed mx-auto max-w-[53rem] left-0 right-0 h-full pointer-events-none z-0">
+        <div class="absolute left-0 top-0 h-full w-[1px] bg-black/10 dark:bg-white/10"></div>
+        <div class="absolute right-0 top-0 h-full w-[1px] bg-black/10 dark:bg-white/10"></div>
+    </div>
+
+    <main class="flex flex-col relative items-center mx-auto">
+        <!-- Hero Section -->
+        <div class="w-full max-w-[53rem] p-6 flex flex-col pt-[150px] md:pt-[188px] pb-[2rem] md:pb-[3rem] px-[1.5rem] md:px-[8rem] items-start gap-[25px]">
+            <div style="opacity: 1; transform: none;">
+                <img alt="Profile picture" width="100" height="100" decoding="async" 
+                     class="rounded-full aspect-square" 
+                     src="assets/profile.png">
+            </div>
+
+            <div class="text-start" style="opacity: 1; transform: none;">
+                <h1 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black text-start no-underline normal-case mb-2 md:mb-2">
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Hey,</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">I'm</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Abdulmalik</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Apata.</span>
+                </h1>
+                
+                <h2 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black text-start no-underline normal-case">
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">A</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Software</span>
+                    <span class="inline-block mr-[0.1em]" style="opacity: 1; filter: blur(0px);">Engineer</span>
+                </h2>
+                <p class="text-[16px] text-[#5a5a5a] font-satoshi text-start mt-[25px] no-underline normal-case" style="opacity: 1; transform: none;">Creating innovative solutions and captivating designs.<br>University student by day, visionary creator by night.</p>
+            </div>
+
+            <div class="flex gap-4" style="opacity: 1; transform: none;">
+                <button class="bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 duration-[300ms] transition-all hover:px-[28px] ml-1 font-satoshi font-medium">Hire Me!</button>
+
+                <div class="flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] text-[#178d00]">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#178d00] dark:bg-[#4ade80] opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#178d00] dark:bg-[#4ade80]"></span>
+                    </span>
+                    <span class="hidden md:flex">Available for new project</span>
+                    <span class="md:hidden">Available</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Marquee -->
+        <div class="w-full overflow-hidden py-8 opacity-1">
+            <div id="projects-marquee" class="flex gap-6 marquee-container">
+                <!-- Projects will be injected by JavaScript -->
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="w-full max-w-[53rem] p-4 md:p-6 flex flex-col py-[100px] md:py-[158px] px-[1.5rem] md:px-[6rem] items-start gap-[20px]">
+            <h2 class="text-[22px] md:text-[28px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white font-jakarta">About</h2>
+
+            <div class="flex flex-col gap-5">
+                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 font-satoshi">
+                    I craft scalable products with exceptional user experiences, 
+                    focusing on innovation and problem-solving.
+                </p>
+
+                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 font-satoshi">
+                    I'm Robinson Honour, a 19-year-old Nigerian software developer with 7.5+ years 
+                    of experience in web development, robotics, and cloud computing.
+                </p>
+
+                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 font-satoshi">
+                    A self-taught programmer and active tech content creator, I'm the CEO and founder 
+                    of Pxxl App, a cloud deployment platform.
+                </p>
+
+                <!-- Polaroid Photos -->
+                <div class="relative w-full h-[200px] md:h-[250px] mt-8 group hidden md:block">
+                    <div class="absolute top-0 left-[20%] bg-white dark:bg-zinc-900 px-2 pt-2 -rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:-rotate-12 group-hover:-translate-x-4 group-hover:scale-105">
+                        <div class="w-[150px] md:w-[200px] h-[150px] md:h-[200px]">
+                            <img alt="About image 1" loading="lazy" width="200" height="200" 
+                                 class="object-cover rounded-lg w-full h-full" 
+                                 src="assets/profile.png">
+                        </div>
+                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black dark:text-white w-full text-center font-satoshi">@belmont_browne</span>
+                    </div>
+
+                    <div class="absolute top-10 right-[20%] bg-white dark:bg-zinc-900 px-2 pt-2 rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:rotate-12 group-hover:translate-x-4 group-hover:scale-105">
+                        <div class="w-[150px] md:w-[200px] h-[150px] md:h-[200px]">
+                            <img alt="About image 2" loading="lazy" width="200" height="200" 
+                                 class="object-cover w-full h-full" 
+                                 src="assets/profile.png">
+                        </div>
+                        <span class="text-xs flex justify-center py-1 pb-3 italic text-black dark:text-white w-full text-center font-satoshi">@Brownie44l1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="w-full max-w-[53rem] flex flex-col pt-[58px] px-[1.5rem] items-center gap-[25px] md:gap-[25px]">
+            <!-- Tech Stack Marquee Container -->
+            <div class="w-[10rem] overflow-hidden relative marquee-fade">
+                <div id="tech-marquee" class="flex items-center">
+                    <!--Tech Stack Marquee -->
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-2 mb-8">
+                <h2 class="text-2xl md:text-3xl lg:text-[32px] text-center font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white font-jakarta">
+                    Here's What I've Been Up To.
+                </h2>
+            </div>
+            
+            <div id="project-grid" class="flex flex-col md:grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                <!-- Projects will be injected by JavaScript -->
+            </div>
+        </div>
+
+        <!--Work Experience Section -->
+
+        <div class="w-full max-w-[53rem] flex flex-col pb-[58px] px-[1.5rem] md:px-[8rem] items-center gap-[25px] md:gap-[25px]">
+            <div class="w-full max-w-[53rem] pt-[100px] md:pt-[154px] flex flex-col items-start">
+                
+                <div class="flex w-full h-[1px] bg-[#E5E5E5] mb-[50px] md:mb-[100px]"></div>
+                <h2 class="text-[22px] font-bold tracking-[-.03em] leading-[110%] text-black mb-[40px]">
+                    Work Experience
+                </h2>
+                
+                <!-- Experience List -->
+                <div class="flex flex-col gap-[30px] w-full">
+                    
+                    <!-- Experience Item 1 -->
+                    <div class="flex flex-col md:flex-row gap-[15px] md:gap-0 md:items-center md:justify-between">
+                        <div class="text-[#8F8F8F] font-medium text-[13px]">
+                            Dec 2024-Present
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[16px] text-black md:text-[#5a5a5a] font-medium">
+                                FreeLancing on the
+                            </div>
+                            <div class="flex items-center gap-1 bg-[#EEF4FF] text-[#3B82F6] px-3 py-1 rounded-md">
+                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] flex items-center justify-center">
+                                    <svg width="5" height="5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 0L9.33013 2.5V7.5L5 10L0.669873 7.5V2.5L5 0Z" fill="white"></path>
+                                    </svg>
+                                </div>
+                                <span>Internet</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 2 -->
+                    <div class="flex flex-col md:flex-row gap-[15px] md:gap-0 md:items-center md:justify-between">
+                        <div class="text-[#8F8F8F] font-medium text-[13px]">
+                            Dec 2023-March 2024
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[16px] text-black md:text-[#5a5a5a] font-medium">
+                                Frontend Intern at
+                            </div>
+                            <div class="flex items-center gap-1 bg-[#EEF4FF] text-[#3B82F6] px-3 py-1 rounded-md">
+                                <div class="w-2 h-2 rounded-full bg-[#3B82F6] flex items-center justify-center">
+                                    <svg width="5" height="5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 0L9.33013 2.5V7.5L5 10L0.669873 7.5V2.5L5 0Z" fill="white"></path>
+                                    </svg>
+                                </div>
+                                <span>Deazy Tech Solutions.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bottom Divider -->
+                <div class="flex w-full h-[1px] bg-[#E5E5E5] my-[50px] md:my-[100px]"></div>
+                
+            </div>
+        </div>
+
+        <!-- How Can I Help Section -->
+        <section class="w-full max-w-[53rem] flex flex-col items-start">
+            <div class="relative bg-black dark:bg-zinc-950 px-[1rem] md:px-[5rem] py-[4rem] md:py-[5rem] w-full overflow-hidden">
+                <!-- Background Pattern -->
+                <img alt="Doodle" loading="lazy" decoding="async" 
+                     class="absolute object-cover top-0 left-0 pointer-events-none w-full h-full" 
+                     src="assets/doodles.jpg">
+                
+                <div class="relative z-10">
+                    <h2 class="text-[26px] md:text-[32px] font-bold tracking-[-.03em] leading-[110%] text-white text-center w-full mb-[12px] font-jakarta">
+                        How Can I Help?
+                    </h2>
+                    <p class="text-[15px] md:text-[18px] text-zinc-400 text-center w-full mb-[32px] md:mb-[40px] font-satoshi">
+                        Let's turn your vision into something amazing.
+                    </p>
+                    
+                    <!-- Skills Marquee -->
+                    <div class="relative w-full overflow-hidden">
+                        <!-- Gradient Overlays -->
+                        <div class="absolute left-0 top-0 bottom-0 w-[60px] md:w-[80px] bg-gradient-to-r from-black dark:from-zinc-950 to-transparent z-10 pointer-events-none"></div>
+                        <div class="absolute right-0 top-0 bottom-0 w-[60px] md:w-[80px] bg-gradient-to-l from-black dark:from-zinc-950 to-transparent z-10 pointer-events-none"></div>
+                        
+                        <!-- Marquee Container -->
+                        <div id="skills-marquee" class="flex gap-5"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <div class="w-full max-w-[53rem] p-4 md:p-6 flex flex-col py-[40px] md:py-[58px] px-[1.5rem] md:px-[6rem] items-center gap-[25px]">
+            <div id="contact-form" class="w-full flex flex-col items-start">
+                <h2 class="text-[26px] md:text-[32px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white mb-[12px] md:mb-[16px] font-jakarta">
+                    Get in touch
+                </h2>
+                <p class="text-[14px] md:text-[16px] font-normal leading-[1.6em] text-zinc-600 dark:text-zinc-400 mb-[24px] md:mb-[32px] max-w-[600px] font-satoshi">
+                    I'm always interested in exploring new opportunities, collaborating, or exchanging ideas. 
+                    Feel free to book a call or email me to discuss a potential project.
+                </p>
+                
+                <form id="contact-form-element" class="w-full flex flex-col gap-4">
+                    <div class="grid md:flex gap-4 w-full">
+                        <input 
+                            type="text" 
+                            placeholder="Full Name" 
+                            required 
+                            class="flex-1 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-[14px] px-[20px] md:px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] text-black dark:text-white outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all placeholder:text-zinc-500 dark:placeholder:text-zinc-500 font-satoshi" 
+                            name="name"
+                        >
+                        <input 
+                            type="email" 
+                            placeholder="Email Address" 
+                            required 
+                            class="flex-1 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-[14px] px-[20px] md:px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] text-black dark:text-white outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all placeholder:text-zinc-500 dark:placeholder:text-zinc-500 font-satoshi" 
+                            name="email"
+                        >
+                    </div>
+                    
+                    <textarea 
+                        name="message" 
+                        placeholder="Write your Message" 
+                        required 
+                        class="w-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-[14px] px-[20px] md:px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] text-black dark:text-white h-[120px] md:h-[150px] outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all resize-none placeholder:text-zinc-500 dark:placeholder:text-zinc-500 font-satoshi"
+                    ></textarea>
+                    
+                    <button 
+                        type="submit" 
+                        class="bg-black dark:bg-white relative text-white dark:text-black py-[12px] md:py-[14px] px-[20px] md:px-[24px] rounded-[14px] text-[14px] md:text-[16px] font-medium hover:opacity-90 duration-[300ms] transition-all w-full disabled:opacity-70 overflow-hidden font-satoshi"
+                    >
+                        <img 
+                            alt="Doodle" 
+                            loading="lazy" 
+                            decoding="async" 
+                            class="absolute object-cover top-0 left-0 w-full h-full pointer-events-none" 
+                            src="assets/doodles.jpg"
+                        >
+                        <span class="relative z-10">Send Message</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Footer -->
+            <div class="w-full py-[30px] md:py-[40px] flex flex-col items-center gap-[16px] border-t border-zinc-200 dark:border-zinc-800">
+                <p class="text-[13px] md:text-[14px] text-center text-zinc-600 dark:text-zinc-400 font-satoshi">
+                    Copyright © 2025 Abdulmalik Apata.
+                </p>
+                
+                <div id="social-links" class="flex gap-6 py-1">
+                    <!-- Social links will be injected by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="test.js"></script>
+</body>
+</html>
