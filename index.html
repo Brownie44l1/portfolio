@@ -24,8 +24,8 @@
 </head>
 <body class="bg-white dark:bg-black transition-colors duration-300 font-satoshi">
     <!-- Fixed Header -->
-    <header class="fixed top-[10px] md:top-[25px] w-full z-50 flex justify-center px-4">
-        <div class="glass-nav bg-white/80 dark:bg-black/80 backdrop-blur-md rounded-[20px] border border-zinc-200 dark:border-zinc-800">
+    <header class="fixed top-[10px] md:top-[25px] w-full z-50 flex justify-center px-4 animate-fade-in-down">
+        <div class="glass-nav bg-white/80 dark:bg-black/80 backdrop-blur-md rounded-[20px] border border-zinc-200 dark:border-zinc-800 transition-all hover:shadow-lg hover:border-zinc-300 dark:hover:border-zinc-700">
             <nav id="main-nav" class="flex items-center gap-1 p-[6px]"></nav>
         </div>
     </header>
@@ -39,28 +39,28 @@
     <main class="flex flex-col relative items-center mx-auto">
         <!-- Hero Section -->
         <div class="w-full max-w-[53rem] p-6 flex flex-col pt-[150px] md:pt-[188px] pb-[2rem] md:pb-[3rem] px-[1.5rem] md:px-[8rem] items-start gap-[25px]">
-            <img alt="Profile picture" width="100" height="100" class="rounded-full aspect-square" src="assets/profile.png">
+            <img alt="Profile picture" width="100" height="100" class="rounded-full aspect-square animate-fade-in-up" style="animation-delay: 0.1s;" src="assets/profile.png">
 
             <div class="text-start">
-                <h1 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white mb-2">
+                <h1 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white mb-2 animate-fade-in-up" style="animation-delay: 0.2s;">
                     Hey, I'm Abdulmalik Apata.
                 </h1>
-                <h2 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white">
+                <h2 class="text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black dark:text-white animate-fade-in-up" style="animation-delay: 0.3s;">
                     A Backend Engineer
                 </h2>
-                <p class="text-[16px] text-zinc-600 dark:text-zinc-400 mt-[25px]">
+                <p class="text-[16px] text-zinc-600 dark:text-zinc-400 mt-[25px] animate-fade-in-up" style="animation-delay: 0.4s;">
                     Building robust, scalable distributed systems.<br>
                     Computer Science student by day, systems architect by night.
                 </p>
             </div>
 
-            <div class="flex gap-4">
+            <div class="flex gap-4 animate-fade-in-up" style="animation-delay: 0.5s;">
                 <a href="#contact-form">
-                    <button class="bg-black dark:bg-white text-white dark:text-black py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 transition-all font-medium">
+                    <button class="btn-primary bg-black dark:bg-white text-white dark:text-black py-[14px] px-[24px] rounded-[14px] text-[16px] font-medium">
                         Hire Me!
                     </button>
                 </a>
-                <div class="flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] dark:bg-[#1a2e1a] text-[#178d00] dark:text-[#4ade80]">
+                <div class="flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] dark:bg-[#1a2e1a] text-[#178d00] dark:text-[#4ade80] transition-all hover:scale-105">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#178d00] dark:bg-[#4ade80] opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-[#178d00] dark:bg-[#4ade80]"></span>

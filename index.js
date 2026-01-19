@@ -156,7 +156,7 @@ function buildNav() {
         return '<div class="h-5 w-[1px] bg-zinc-200 dark:bg-zinc-700 md:mx-2"></div>';
       if (item.type === "cta")
         return `
-      <a href="${item.href}" class="bg-black dark:bg-white text-white dark:text-black py-[14px] px-[20px] md:px-[22px] rounded-[14px] text-sm font-semibold hover:opacity-90 transition-all ml-2 md:ml-1">
+      <a href="${item.href}" class="btn-primary bg-black dark:bg-white text-white dark:text-black py-[14px] px-[20px] md:px-[22px] rounded-[14px] text-sm font-semibold ml-2 md:ml-1">
         <span class="hidden md:flex">${item.label}</span><span class="md:hidden">${item.mobileLabel}</span>
       </a>`;
 
@@ -165,7 +165,7 @@ function buildNav() {
       return `
       <a href="${item.href}" target="${item.target || "_self"}" ${
         item.download ? "download" : ""
-      } class="p-[15px] text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white relative group transition-all hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-[15px]">
+      } class="nav-icon p-[15px] text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white relative group transition-all hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-[15px]">
         ${svgContent}
         <span class="tooltip">${item.label}</span>
       </a>`;
@@ -218,7 +218,7 @@ function projectGridCard(project) {
   return `
     <a href="${
       project.href
-    }" class="w-full rounded-[18px] overflow-hidden border border-zinc-200 dark:border-zinc-800 relative transition-all hover:border-zinc-300 dark:hover:border-zinc-700">
+    }" class="w-full rounded-[18px] overflow-hidden border border-zinc-200 dark:border-zinc-800 relative transition-all hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-lg">
       <div class="px-4 pt-4 pb-3 group">
         <div class="relative w-full h-[180px] md:h-[200px] border border-zinc-200 dark:border-zinc-800 rounded-[16px] overflow-hidden">
           <img alt="${
@@ -235,7 +235,7 @@ function projectGridCard(project) {
         <p class="text-zinc-600 dark:text-zinc-400 text-[14px] md:text-[15px] line-clamp-2">${
           project.description
         }</p>
-        <button class="mt-4 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 flex items-center rounded-[12px] px-[20px] py-[10px] md:py-[12px] text-[14px] md:text-[15px] font-medium text-black dark:text-white transition-all group">
+        <button class="btn-secondary mt-4 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 flex items-center rounded-[12px] px-[20px] py-[10px] md:py-[12px] text-[14px] md:text-[15px] font-medium text-black dark:text-white transition-all group">
           <span class="flex items-center group-hover:pr-2 transition-all">View Project</span>
           ${svg('<path d="m9 18 6-6-6-6"></path>', "ml-2 w-4 h-4")}
         </button>
@@ -251,7 +251,7 @@ function buildProjectGrid() {
     `
     <div class="col-span-1 md:col-span-2 w-full flex justify-center">
       <a href="/projects">
-        <button class="mt-4 bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 flex items-center rounded-[14px] px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] font-medium text-white dark:text-black transition-all group">
+        <button class="btn-primary mt-4 bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 flex items-center rounded-[14px] px-[24px] py-[12px] md:py-[14px] text-[14px] md:text-[16px] font-medium text-white dark:text-black transition-all group">
           <span class="flex items-center group-hover:pr-2 transition-all">View All Projects</span>
           ${svg('<path d="m9 18 6-6-6-6"></path>', "ml-2 w-4 h-4")}
         </button>
