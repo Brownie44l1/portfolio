@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail | Abdulmalik Apata</title>
+    <meta name="description" content="Project details by Abdulmalik Apata - Backend Software Engineer">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          darkMode: 'class',
+          theme: {
+            extend: {
+              fontFamily: {
+                satoshi: ['Satoshi', 'system-ui', 'sans-serif'],
+              },
+            },
+          },
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"/>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-white dark:bg-black transition-colors duration-300 font-satoshi">
+    
+    <!-- SVG Filter Definition -->
+    <svg style="display:none">
+        <filter id="glass-distortion" x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="2" seed="10" result="turbulence"/>
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
+    <!-- Fixed Header -->
+    <header class="fixed top-[10px] md:top-[25px] w-full z-50 flex justify-center p-4">
+        <div class="liquidGlass-wrapper bg-[#ffffff80] rounded-[20px] border border-zinc-200">
+            <div class="liquidGlass-effect"></div>
+            <div class="liquidGlass-tint"></div>
+            <div class="liquidGlass-shine"></div>
+            <nav id="main-nav" class="liquidGlass-text flex items-center gap-1 p-[6px] relative z-10">
+                <!-- Navigation will be injected by JS -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Vertical Lines -->
+    <div class="fixed mx-auto max-w-[53rem] left-0 right-0 h-full pointer-events-none z-0">
+        <div class="absolute left-0 top-0 h-full w-[1px] bg-black/10 dark:bg-white/10"></div>
+        <div class="absolute right-0 top-0 h-full w-[1px] bg-black/10 dark:bg-white/10"></div>
+    </div>
+
+    <main class="flex flex-col relative items-center mx-auto"> 
+        <div class="w-full max-w-[53rem] p-6 flex flex-col pt-[8rem] pb-[158px] md:py-[12rem] items-center gap-[25px]">
+            <div class="w-full max-w-[75rem] mx-auto md:px-6 m:py-12" style="opacity: 1; transform: none;">
+                <div id="project-details" class="flex flex-col gap-8">
+                    <!-- Project details will be injected by JS -->
+                </div>
+                
+                <div id="project-navigation">
+                    <!-- Navigation buttons will be injected by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="w-full max-w-[53rem] p-6 flex flex-col py-[58px] px-[8rem] items-center gap-[25px]">
+            <div class="w-full max-w-[53rem] py-[40px] flex flex-col items-center gap-[16px] border-t border-zinc-200 dark:border-zinc-800">
+                <p class="text-[15px] text-center text-zinc-600 dark:text-zinc-400">Copyright © 2025 Abdulmalik Apata</p>
+                <div id="social-links" class="flex gap-6 py-1"></div>
+            </div>
+        </div> 
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/utils/theme.js"></script>
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/config/data.js"></script>
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/footer.js"></script>
+    <script src="js/components/projectCard.js"></script>
+    <script src="js/pages/projectDetail.js"></script>
+</body>
+</html>
