@@ -56,14 +56,19 @@ class ProjectDetailPage {
       "prev"
     );
 
-    let navigationHTML =
-      '<div class="flex flex-col md:flex-row gap-[1.5rem] md:gap-0 justify-between items-center mb-2">';
+    let navigationHTML = '<div class="flex flex-col gap-6 mt-8 mb-8">';
 
-    // Visit project button (if URL exists)
+    // Action buttons row
+    navigationHTML +=
+      '<div class="flex flex-col md:flex-row gap-4 md:gap-4 justify-between items-stretch md:items-center">';
+
+    // Left side - Visit Project & Technical Breakdown
+    navigationHTML += '<div class="flex flex-col sm:flex-row gap-3">';
+
     if (this.currentProject.url) {
       navigationHTML += `
-        <a target="_blank" href="${this.currentProject.url}">
-          <button class="bg-black dark:bg-white text-white dark:text-black flex items-center gap-2 px-6 py-3 rounded-[14px] hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-300">
+        <a target="_blank" href="${this.currentProject.url}" class="flex-1 sm:flex-initial">
+          <button class="w-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center gap-2 px-6 py-3 rounded-[14px] hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-300">
             <span>Visit Project</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
               <path d="M15 3h6v6"></path>
@@ -72,17 +77,30 @@ class ProjectDetailPage {
             </svg>
           </button>
         </a>`;
-    } else {
-      navigationHTML += "<div></div>"; // Spacer
     }
 
-    // Next/Previous buttons
-    navigationHTML += '<div class="flex gap-4">';
+    // Technical Breakdown button (if blogUrl exists)
+    if (this.currentProject.blogUrl) {
+      navigationHTML += `
+        <a target="_blank" href="${this.currentProject.blogUrl}" class="flex-1 sm:flex-initial">
+          <button class="w-full bg-zinc-100 dark:bg-zinc-800 text-black dark:text-white flex items-center justify-center gap-2 px-6 py-3 rounded-[14px] hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+            </svg>
+            <span>Technical Breakdown</span>
+          </button>
+        </a>`;
+    }
+
+    navigationHTML += "</div>";
+
+    // Right side - Navigation buttons
+    navigationHTML += '<div class="flex gap-3">';
 
     if (prevProject) {
       navigationHTML += `
-        <a href="/project-detail.html?id=${prevProject.slug}">
-          <button class="flex items-center gap-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 px-6 py-3 rounded-[14px] transition-all duration-300">
+        <a href="/project-detail.html?id=${prevProject.slug}" class="flex-1 md:flex-initial">
+          <button class="w-full flex items-center justify-center gap-2 bg-zinc-100 dark:bg-zinc-800 text-black dark:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700 px-6 py-3 rounded-[14px] transition-all duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
               <path d="m15 18-6-6 6-6"></path>
             </svg>
@@ -93,8 +111,8 @@ class ProjectDetailPage {
 
     if (nextProject) {
       navigationHTML += `
-        <a href="/project-detail.html?id=${nextProject.slug}">
-          <button class="flex items-center gap-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 px-6 py-3 rounded-[14px] transition-all duration-300">
+        <a href="/project-detail.html?id=${nextProject.slug}" class="flex-1 md:flex-initial">
+          <button class="w-full flex items-center justify-center gap-2 bg-zinc-100 dark:bg-zinc-800 text-black dark:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700 px-6 py-3 rounded-[14px] transition-all duration-300">
             <span>Next</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
               <path d="m9 18 6-6-6-6"></path>
@@ -103,7 +121,7 @@ class ProjectDetailPage {
         </a>`;
     }
 
-    navigationHTML += "</div></div>";
+    navigationHTML += "</div></div></div>";
     container.innerHTML = navigationHTML;
   }
 

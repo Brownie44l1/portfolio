@@ -64,10 +64,12 @@ class ProjectCard {
     const additionalImages = project.images
       .slice(1)
       .map(
-        (img) => `
-      <div class="rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] dark:border-zinc-800 bg-[#fafafa] dark:bg-zinc-900 cursor-pointer" style="box-shadow:inset 0px 3px 0px 0px rgb(255, 255, 255)">
+        (img, index) => `
+      <div class="rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] dark:border-zinc-800 bg-[#fafafa] dark:bg-zinc-900 cursor-pointer group" style="box-shadow:inset 0px 3px 0px 0px rgba(255, 255, 255, 0.05)" onclick="window.open('${img}', '_blank')">
         <div class="p-6">
-          <img alt="${project.title} screenshot" loading="lazy" width="600" height="400" class="rounded-[20px] w-full object-cover" src="${img}">
+          <img alt="${project.title} screenshot ${
+          index + 2
+        }" loading="lazy" width="600" height="400" class="rounded-[20px] w-full object-cover transition-transform duration-300 group-hover:scale-105" src="${img}">
         </div>
       </div>
     `
@@ -123,12 +125,14 @@ class ProjectCard {
         </div>
       </div>
 
-      <div class="w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] dark:border-zinc-800 bg-[#fafafa] dark:bg-zinc-900" style="box-shadow:inset 0px 3px 0px 0px rgba(255, 255, 255, 0.05)">
+      <div class="w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] dark:border-zinc-800 bg-[#fafafa] dark:bg-zinc-900 cursor-pointer group" style="box-shadow:inset 0px 3px 0px 0px rgba(255, 255, 255, 0.05)" onclick="window.open('${
+        project.images[0]
+      }', '_blank')">
         <div class="p-8">
-          <div class="relative cursor-pointer" style="filter:drop-shadow(0px 10px 7px rgba(0, 0, 0, 0.25))">
+          <div class="relative" style="filter:drop-shadow(0px 10px 7px rgba(0, 0, 0, 0.25))">
             <img alt="${
               project.title
-            } main image" loading="lazy" width="1200" height="675" class="w-full rounded-[20px] object-cover" src="${
+            } main image" loading="lazy" width="1200" height="675" class="w-full rounded-[20px] object-cover transition-transform duration-300 group-hover:scale-105" src="${
       project.images[0]
     }">
           </div>

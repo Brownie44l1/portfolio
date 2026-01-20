@@ -79,8 +79,8 @@ class Marquee {
 
   static createSkillsMarquee(containerId, skills, duration = 35) {
     const renderSkill = (skill) => `
-      <div class="bg-white dark:bg-zinc-800 rounded-[16px] px-6 py-3 flex items-center hover:scale-105 transition-transform cursor-pointer flex-shrink-0">
-        <h3 class="text-[13px] font-medium text-black dark:text-white whitespace-nowrap">${skill}</h3>
+      <div class="bg-white rounded-[16px] px-6 py-3 flex items-center hover:scale-105 transition-transform cursor-pointer flex-shrink-0">
+        <h3 class="text-[13px] font-medium text-black whitespace-nowrap">${skill}</h3>
       </div>`;
 
     createMarquee(containerId, skills, renderSkill, duration);

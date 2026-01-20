@@ -74,6 +74,7 @@ const CONFIG = {
       type: "Cloud Platform",
       client: "PXXL",
       url: "https://pxxl.app/",
+      blogUrl: "/blog/pxxl-app-technical-breakdown", // Add your blog post URL here
       featured: true,
     },
     {
@@ -92,6 +93,7 @@ const CONFIG = {
       type: "Backend System",
       client: "Personal",
       url: null,
+      blogUrl: "/blog/distributed-task-queue",
       featured: true,
     },
     {
@@ -110,6 +112,7 @@ const CONFIG = {
       type: "Infrastructure",
       client: "Enterprise",
       url: null,
+      blogUrl: null, // No blog post for this one
       featured: true,
     },
     {
@@ -127,6 +130,7 @@ const CONFIG = {
       type: "Data Pipeline",
       client: "Startup",
       url: null,
+      blogUrl: "/blog/realtime-analytics-architecture",
       featured: true,
     },
     {
@@ -145,6 +149,7 @@ const CONFIG = {
       type: "Research",
       client: "Academic",
       url: "https://github.com/Brownie44l1/raft-consensus",
+      blogUrl: "/blog/understanding-raft-consensus",
       featured: false,
     },
   ],
