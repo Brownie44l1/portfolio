@@ -190,9 +190,9 @@ const CONFIG = {
       icon: '<path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path>',
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/codewithhonour",
-      icon: '<rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>',
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/apata-abdulmalik-715351259/",
+      icon: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-13h4v2a4 4 0 0 1 3-2z"></path><rect width="4" height="13" x="2" y="8"></rect><circle cx="4" cy="4" r="2"></circle>',
     },
     {
       name: "GitHub",
