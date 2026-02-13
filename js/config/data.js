@@ -61,9 +61,9 @@ const CONFIG = {
         "Minimal HTTP/1.1 server achieving 60k req/sec through careful optimization of Go's runtime, eliminating lock contention, and implementing zero-copy techniques",
       longDescription:
         "A from-scratch HTTP/1.1 server implementation in Go that achieves approximately 60,000 requests per second on modest hardware (Intel Pentium N4200). The project explores low-level performance optimization including per-connection buffer reuse, zero-copy header parsing, and understanding Go's netpoller internals. Through iterative benchmarking and profiling, achieved a 216% performance improvement by eliminating sync.Pool contention and implementing connection-local buffers. The journey involved failed experiments with C (epoll) and Rust to ultimately understand that performance comes from working with the language's runtime, not against it.",
-      image: "assets/images/projects/http-server-arch.png",
+      image: "assets/images/projects/http-server.png",
       images: [
-        "assets/images/projects/http-server-arch.png",
+        "assets/images/projects/http-server.png",
         "assets/images/projects/http-server-bench.png",
       ],
       technologies: [
@@ -77,7 +77,7 @@ const CONFIG = {
       type: "Systems Programming",
       client: "Personal Research",
       url: null,
-      github: "https://github.com/Brownie44l1/http-server", // Update with your actual repo
+      github: "https://github.com/Brownie44l1/http-server",
       blogUrl: "https://belmont-blog.vercel.app/projects/http-server.html",
       featured: true,
       metrics: [
@@ -115,7 +115,7 @@ const CONFIG = {
       type: "ML Research",
       client: "Academic Project",
       url: "https://fer-emotionai.vercel.app/",
-      github: "https://github.com/Brownie44l1/facial-emotion-recognition", // Update with your actual repo
+      github: "https://github.com/Brownie44l1/fer-frontend",
       blogUrl: null,
       featured: true,
       metrics: [
@@ -151,8 +151,8 @@ const CONFIG = {
       date: "2024",
       type: "Full-Stack Web App",
       client: "Educational Institutions",
-      url: "https://voicebox.vercel.app/",
-      github: "https://github.com/Brownie44l1/voicebox", // Update with your actual repo
+      url: "https://voicebox.vercel.app",
+      github: "https://github.com/Brownie44l1/voicebox-backend",
       blogUrl: null,
       featured: true,
       metrics: [
@@ -177,7 +177,8 @@ const CONFIG = {
       type: "Full-Stack Web App",
       client: "SME Sector",
       url: null, // Will be updated after deployment
-      github: "https://github.com/Brownie44l1/inventory-tracker", // Update with your actual repo
+      github:
+        "https://github.com/Brownie44l1/Inventory-Management-System-for-SMSE",
       blogUrl: null,
       featured: true,
       metrics: [
