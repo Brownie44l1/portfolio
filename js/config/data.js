@@ -187,6 +187,35 @@ const CONFIG = {
         { label: "Status", value: "Pending Deployment" },
       ],
     },
+    {
+      id: "social-media-baba",
+      slug: "social-media-baba",
+      title: "TheSocialMediaBaba Portfolio",
+      subtitle: "Professional social media management portfolio website",
+      description:
+        "Modern, conversion-focused portfolio website for a social media expert showcasing services, case studies, and client testimonials",
+      longDescription:
+        "A sleek, professional portfolio website built for TheSocialMediaBaba, a social media management expert. The site effectively showcases data-driven content strategies, client success stories, and service offerings across all major social platforms. Features include an integrated Calendly booking system for client consultations, responsive design for mobile and desktop viewing, interactive testimonials section, and detailed case studies highlighting real metrics and results. Built as a static site with modern HTML, CSS, and JavaScript, optimized for fast loading and SEO. The clean, conversion-optimized design emphasizes trust-building through client logos, testimonials, and proven results across 50+ brands.",
+      image: "assets/images/projects/socialmedia-baba-ui.png",
+      images: [
+        "assets/images/projects/socialmedia-baba-ui.png",
+        "assets/images/projects/socialmedia-baba-services.png",
+        "assets/images/projects/socialmedia-baba-testimonials.png",
+      ],
+      technologies: ["HTML", "CSS", "JavaScript", "TailwindCSS", "Vercel"],
+      date: "2026",
+      type: "Static Portfolio Website",
+      client: "Social Media Professional",
+      url: "https://thesocialmediababa.vercel.app/",
+      github: null,
+      blogUrl: null,
+      featured: false,
+      metrics: [
+        { label: "Client Reach", value: "50+ Brands" },
+        { label: "Type", value: "Frontend Only" },
+        { label: "Status", value: "Live" },
+      ],
+    },
   ],
 
   // Skills
