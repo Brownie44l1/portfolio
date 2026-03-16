@@ -10,7 +10,7 @@ class ProjectCard {
   static renderMarqueeCard(project) {
     return `
       <div class="flex px-3 md:px-4 flex-shrink-0 min-w-[320px] md:min-w-[400px]">
-        <a href="/project-detail.html?id=${project.slug}" class="flex w-full rounded-[20px] overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 relative transition-all hover:scale-[1.02] cursor-pointer shadow-[inset_0_3px_0_0_rgba(255,255,255,0.05)]">
+        <a href="/project-detail.html?id=${project.slug}" class="flex w-full rounded-[20px] mr-6 overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 relative transition-all hover:scale-[1.02] cursor-pointer shadow-[inset_0_3px_0_0_rgba(255,255,255,0.05)]">
           <div class="p-6 md:p-8 rounded-[10px]">
             <img alt="${project.title}" loading="lazy" width="400" height="400" class="w-full h-[200px] md:h-[250px] object-cover rounded-[10px]" src="${project.image}">
           </div>

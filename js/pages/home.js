@@ -118,7 +118,7 @@ class HomePage {
     createMarquee(
       "tech-marquee",
       this.config.techIcons,
-      (icon) => `<div class="flex-shrink-0">${icon}</div>`,
+      (icon) => `<div class="flex-shrink-0 mr-3">${icon}</div>`,
       20
     );
 
